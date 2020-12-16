@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="hexo," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、技术选型常见个人博客搭建方案搭建个人博客通常有如下选择： WorkPress： GitHubPages + Jekyll： GitHubPages + Hexo： 选择 GitHubPages + Hexo上面提到的三种个人博客搭建方案，在对这三个方案做了简单的了解之后，我选择了 GitHubPages + Hexo。主要是出于以下几点考虑：    WorkPress：一般需要独立域名（收费）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="免费个人博客搭建详解">
+<meta property="og:url" content="http://example.com/2020/12/16/start-hexo/index.html">
+<meta property="og:site_name" content="稀饭の博客">
+<meta property="og:description" content="一、技术选型常见个人博客搭建方案搭建个人博客通常有如下选择： WorkPress： GitHubPages + Jekyll： GitHubPages + Hexo： 选择 GitHubPages + Hexo上面提到的三种个人博客搭建方案，在对这三个方案做了简单的了解之后，我选择了 GitHubPages + Hexo。主要是出于以下几点考虑：    WorkPress：一般需要独立域名（收费）">
+<meta property="og:locale">
+<meta property="og:image" content="https://app.yinxiang.com/images/file-generic.png">
+<meta property="og:image" content="https://app.yinxiang.com/images/file-generic.png">
+<meta property="article:published_time" content="2020-12-16T09:24:51.000Z">
+<meta property="article:modified_time" content="2020-12-16T09:33:11.421Z">
+<meta property="article:author" content="稀饭">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://app.yinxiang.com/images/file-generic.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2020/12/16/start-hexo/"/>
+
+
+
+
+
+  <title>免费个人博客搭建详解 | 稀饭の博客</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">稀饭の博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">记录实际工作中遇到的一些问题及解决方案</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/12/16/start-hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="稀饭の博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">免费个人博客搭建详解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-16T17:24:51+08:00">
+                2020-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index">
+                    <span itemprop="name">博客搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一、技术选型"><a href="#一、技术选型" class="headerlink" title="一、技术选型"></a>一、技术选型</h1><h2 id="常见个人博客搭建方案"><a href="#常见个人博客搭建方案" class="headerlink" title="常见个人博客搭建方案"></a>常见个人博客搭建方案</h2><p>搭建个人博客通常有如下选择：</p>
+<p><strong><a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://baike.baidu.com/view/23618.htm">WorkPress：</a></strong></p>
+<p><strong><a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://pages.github.com/">GitHubPages</a> + <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://baike.baidu.com/view/7878719.htm">Jekyll</a>：</strong></p>
+<p><strong><a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://pages.github.com/">GitHubPages</a> + <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://hexo.io/">Hexo</a>：</strong></p>
+<h2 id="选择-GitHubPages-Hexo"><a href="#选择-GitHubPages-Hexo" class="headerlink" title="选择 GitHubPages + Hexo"></a>选择 GitHubPages + Hexo</h2><p>上面提到的三种个人博客搭建方案，在对这三个方案做了简单的了解之后，我选择了 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://pages.github.com/">GitHubPages</a> + <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://hexo.io/">Hexo</a>。主要是出于以下几点考虑：</p>
+<ul>
+<li>  WorkPress：一般需要独立域名（收费），对 MarkDown 不友好</li>
+<li>  GitHubPages + Jekell：免费，稍微有点麻烦</li>
+<li>  GitHubPages + Hexo：免费，使用简单，使用者众多…</li>
+</ul>
+<h2 id="Hexo-简介"><a href="#Hexo-简介" class="headerlink" title="Hexo 简介"></a>Hexo 简介</h2><p>Hexo 是一个基于 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://nodejs.cn/">Nodejs</a> 的静态博客网站生成器，作者是来自台湾的 Tommy Chen(<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://zespia.tw/">https://zespia.tw/</a>)</p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>  不可思议的快速 ─ 只要一眨眼静态文件即生成完成</li>
+<li>  支持 Markdown</li>
+<li>  仅需一道指令即可部署到 GitHub Pages 和 Heroku</li>
+<li>  已移植 Octopress 插件</li>
+<li>  高扩展性、自订性</li>
+<li>  兼容于 Windows, Mac &amp; Linux</li>
+</ul>
+<h1 id="二、博客搭建"><a href="#二、博客搭建" class="headerlink" title="二、博客搭建"></a>二、博客搭建</h1><p>跟着我做，简简单单5-7分钟你即可拥有自己的个人博客。开始吧！</p>
+<h2 id="创建-GitHub-仓库"><a href="#创建-GitHub-仓库" class="headerlink" title="创建 GitHub 仓库"></a>创建 GitHub 仓库</h2><h3 id="注册-登录"><a href="#注册-登录" class="headerlink" title="注册/登录"></a>注册/登录</h3><p>如果没有帐号，前往 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://github.com/join?source=header-home">GitHub</a> 页面完成<strong>注册</strong>：</p>
+<ol>
+<li> 用户名</li>
+<li> 邮箱地址</li>
+<li> 密码</li>
+<li> Create an account</li>
+</ol>
+<p><strong>登录</strong></p>
+<p>如果有账号，前往 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://github.com/login">GitHub</a> 页面登录：</p>
+<ol>
+<li> 用户名或邮箱地址</li>
+<li> 密码</li>
+<li> Sign in</li>
+</ol>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>直接看图操作：</p>
+<p>[<img src="https://app.yinxiang.com/images/file-generic.png"><br><a target="_blank" rel="noopener" href="https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/5c2cf0b1-eb31-4c80-a027-5a8be2ea0485/webp"><img src="https://app.yinxiang.com/images/file-generic.png"> webp<br><span class="en-ignore" style="font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;"> 24.3 KB</span>
+</a></div></div></p>
+</div>
+<div style="box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);">创建仓库：步骤二</div>
+</div>
+
+<p>”<strong>步骤二</strong>“中，注意 Respository name 中一定要输入：你的用户名.github.io。其他地方不用修改，然后直接点 ”Create repository“ 按钮完成创建即可。</p>
+<h2 id="本地环境准备"><a href="#本地环境准备" class="headerlink" title="本地环境准备"></a>本地环境准备</h2><h3 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h3><h4 id="Windows-中"><a href="#Windows-中" class="headerlink" title="Windows 中"></a>Windows 中</h4><p><strong>1、下载 Git</strong></p>
+<p>打开 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://git-scm.com/download/">Git</a> 官网，选择 Downloads 下面的 Windows（按照你的系统选择 32 位或者 64 位）。考虑到可能受网络环境影响，我已经把 Git 上传到网盘分享出来了，<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://pan.baidu.com/s/1hrMjxHE">点这里去网盘</a>。</p>
+<p><strong>2、安装 Git</strong></p>
+<p>双击安装文件 -&gt; 下一步 -&gt; 下一步…</p>
+<p>没有特殊要求的直接下一步即可，不用去修改默认选项。</p>
+<h4 id="Mac-OS-中"><a href="#Mac-OS-中" class="headerlink" title="Mac OS 中"></a>Mac OS 中</h4><p>话说 Mac 上的 XCode 自带了 Git。（汗！没装 XCode 怎么破）</p>
+<p><strong>1、下载 Git</strong></p>
+<p>打开 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://git-scm.com/download/">Git</a> 官网，选择 Downloads 下面的 Mac OS X。Mac版的 Git 也上传到网盘分享出来了，<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://pan.baidu.com/s/1hrMjxHE">点这里去网盘</a>。</p>
+<p><strong>2、安装 Git</strong></p>
+<p>直接双击 dmg 文件安装即可。</p>
+<h3 id="Nodejs安装"><a href="#Nodejs安装" class="headerlink" title="Nodejs安装"></a>Nodejs安装</h3><h4 id="Windows-中-1"><a href="#Windows-中-1" class="headerlink" title="Windows 中"></a>Windows 中</h4><p><strong>1、下载 Nodejs</strong></p>
+<p>打开 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://nodejs.org/en/download/">Nodejs</a> 下载页面，选择合适你当前系统版本的安装包。这里建议使用 LTS 版本的，当前的是 v4.4.3。我已经把 Windows 32/64 位的安装包都提交到网盘了，你可以直接从网盘下载，<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://pan.baidu.com/s/1hrMjxHE">点这里去网盘</a>。</p>
+<p><strong>2、安装 Nodejs</strong></p>
+<p>双击安装文件 -&gt; 下一步 -&gt; 下一步…</p>
+<h4 id="Mac-OS-中-1"><a href="#Mac-OS-中-1" class="headerlink" title="Mac OS 中"></a>Mac OS 中</h4><p><strong>1、下载 Nodejs</strong></p>
+<p>打开 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://nodejs.org/en/download/">Nodejs</a> 下载页面，选择 Macintosh Installer 即可开始下载。网盘里面也上传了，<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://pan.baidu.com/s/1hrMjxHE">点这里去网盘</a>。</p>
+<p><strong>2、安装 Nodejs</strong></p>
+<p>直接双击 pkg 文件安装即可。</p>
+<p><strong>说明：</strong> Nodejs 也可以使用 nvm（Nodejs版本管理器）来安装，步骤如下：</p>
+<p>**1、安装 nvm **</p>
+<ol>
+<li><p>通过 brew 安装</p>
+<p> $ brew install nvm</p>
+<p> $ mkdir ~/.nvm</p>
+<p> $ export NVM_DIR=~/.nvm</p>
+<p> $ . $(brew –prefix nvm)/nvm.sh</p>
+<p> $ source ~/.nvm/nvm.sh // 使配置生效</p>
+</li>
+<li><p>使用 curl 安装</p>
+<p> $ curl <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://raw.github.com/creationix/nvm/master/install.sh">https://raw.github.com/creationix/nvm/master/install.sh</a> | sh</p>
+<p> $ source ~/.nvm/nvm.sh  // 使配置生效</p>
+</li>
+</ol>
+<p><strong>2、安装 Nodejs 4</strong></p>
+<p>$ nvm install 4</p>
+<h3 id="Hexo-安装"><a href="#Hexo-安装" class="headerlink" title="Hexo 安装"></a>Hexo 安装</h3><p>Hexo 是今天的主角，先打开 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://hexo.io/">Hexo</a> 官网。</p>
+<div style="box-sizing:border-box;width:100%;margin:0px;padding-bottom:25px;text-align:center;font-size:0px;">
+<div style="box-sizing:border-box;position:relative;z-index:95;background-color:transparent;transition:background-color 0.1s linear 0s;margin:0px auto;max-width:700px;max-height:469px;">
+<div style="box-sizing:border-box;z-index:90;padding-bottom:67.06%;"></div>
+<div style="box-sizing:border-box;position:absolute;top:0px;left:0px;width:100%;height:100%;overflow:hidden;"><div class="en-ignore" data-resource-guid="776920b4-f348-4ce1-984b-a229e136eccf" style="display: inline-block; text-align: left; background-color: #ecf0f3; border: 1px solid #bec6cb; min-width: 196px; max-width: 588px; padding: 4px 6px 5px; margin-bottom: 1em; height: 34px;">[![](https://app.yinxiang.com/images/file-generic.png) webp
+<span class="en-ignore" style="font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;"> 36.6 KB</span>
+](https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/776920b4-f348-4ce1-984b-a229e136eccf/webp)</div></div>
+</div>
+<div style="box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);">Hexo官网</div>
+</div>
+
+<p>对，如上图所示，就一条命令，很简单有没有。</p>
+<h3 id="Windows-中-2"><a href="#Windows-中-2" class="headerlink" title="Windows 中"></a>Windows 中</h3><p><strong>1、打开命令行</strong></p>
+<p>win+R，输入 cmd，回车</p>
+<p><strong>2、输入命令</strong></p>
+<div style="box-sizing:border-box;position:relative;overflow:hidden;">
+
+<pre><code>npm install hexo&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;-&lt;/span&gt;cli &lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;-&lt;/span&gt;g
+&lt;span style=&quot;box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;&quot;&gt;&lt;span style=&quot;box-sizing:border-box;pointer-events:none;display:block;&quot;&gt;&lt;span style=&quot;color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;`&lt;/pre&gt;&lt;/div&gt;
+
+#### Mac OS 中
+
+**1、打开终端**
+
+不要问我终端在哪里...
+
+**2、输入命令**
+
+&lt;div style=&quot;box-sizing:border-box;position:relative;overflow:hidden;&quot;&gt;&lt;pre style=&quot;box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);&quot; xml:space=&quot;preserve&quot;&gt;`$ npm install hexo&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;-&lt;/span&gt;cli &lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;-&lt;/span&gt;g
+&lt;span style=&quot;box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;&quot;&gt;&lt;span style=&quot;box-sizing:border-box;pointer-events:none;display:block;&quot;&gt;&lt;span style=&quot;color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;`&lt;/pre&gt;&lt;/div&gt;
+
+### 创建本地博客
+
+### Windows 中
+
+**1、打开命令行，定位到你希望放置博客的位置**
+
+&lt;div style=&quot;box-sizing:border-box;width:100%;margin:0px;padding-bottom:25px;text-align:center;font-size:0px;&quot;&gt;
+&lt;div style=&quot;box-sizing:border-box;position:relative;z-index:95;background-color:transparent;transition:background-color 0.1s linear 0s;margin:0px auto;max-width:229px;max-height:140px;&quot;&gt;
+&lt;div style=&quot;box-sizing:border-box;z-index:90;padding-bottom:61.14000000000001%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;box-sizing:border-box;position:absolute;top:0px;left:0px;width:100%;height:100%;overflow:hidden;&quot;&gt;&lt;div class=&quot;en-ignore&quot; data-resource-guid=&quot;b4be890a-89fb-4b05-8a71-b6144fb33b3d&quot; style=&quot;display: inline-block; text-align: left; background-color: #ecf0f3; border: 1px solid #bec6cb; min-width: 196px; max-width: 588px; padding: 4px 6px 5px; margin-bottom: 1em; height: 34px;&quot;&gt;[![](https://app.yinxiang.com/images/file-generic.png) webp
+&lt;span class=&quot;en-ignore&quot; style=&quot;font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;&quot;&gt; 3.4 KB&lt;/span&gt;
+](https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/b4be890a-89fb-4b05-8a71-b6144fb33b3d/webp)&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);&quot;&gt;定位到目标目录&lt;/div&gt;
+&lt;/div&gt;
+
+**2、输入命令**
+
+&lt;div style=&quot;box-sizing:border-box;position:relative;overflow:hidden;&quot;&gt;&lt;pre style=&quot;box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);&quot; xml:space=&quot;preserve&quot;&gt;`hexo init 你的用户名&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;github&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;io  &lt;span style=&quot;box-sizing:border-box;color:rgb(153, 153, 153);&quot;&gt;// 建议和创建仓库时使用同一个&lt;/span&gt;
+&lt;span style=&quot;box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;&quot;&gt;&lt;span style=&quot;box-sizing:border-box;pointer-events:none;display:block;&quot;&gt;&lt;span style=&quot;color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;`&lt;/pre&gt;&lt;/div&gt;
+
+#### Mac OS 中
+
+**1、打开终端，定位到你希望放置博客的位置**
+
+&lt;div style=&quot;box-sizing:border-box;width:100%;margin:0px;padding-bottom:25px;text-align:center;font-size:0px;&quot;&gt;
+&lt;div style=&quot;box-sizing:border-box;position:relative;z-index:95;background-color:transparent;transition:background-color 0.1s linear 0s;margin:0px auto;max-width:700px;max-height:254px;&quot;&gt;
+&lt;div style=&quot;box-sizing:border-box;z-index:90;padding-bottom:28.410000000000004%;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;box-sizing:border-box;position:absolute;top:0px;left:0px;width:100%;height:100%;overflow:hidden;&quot;&gt;&lt;div class=&quot;en-ignore&quot; data-resource-guid=&quot;c6e176c7-93b2-49b1-bf62-7cb02cb8c889&quot; style=&quot;display: inline-block; text-align: left; background-color: #ecf0f3; border: 1px solid #bec6cb; min-width: 196px; max-width: 588px; padding: 4px 6px 5px; margin-bottom: 1em; height: 34px;&quot;&gt;[![](https://app.yinxiang.com/images/file-generic.png) webp
+&lt;span class=&quot;en-ignore&quot; style=&quot;font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;&quot;&gt; 25.1 KB&lt;/span&gt;
+](https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/c6e176c7-93b2-49b1-bf62-7cb02cb8c889/webp)&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div style=&quot;box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);&quot;&gt;Mac上定位到指定目录&lt;/div&gt;
+&lt;/div&gt;
+
+**2、输入命令**
+
+&lt;div style=&quot;box-sizing:border-box;position:relative;overflow:hidden;&quot;&gt;&lt;pre style=&quot;box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &amp;quot;Andale Mono&amp;quot;, &amp;quot;Ubuntu Mono&amp;quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);&quot; xml:space=&quot;preserve&quot;&gt;`$ hexo init 你的用户名&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;github&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;io  &lt;span style=&quot;box-sizing:border-box;color:rgb(153, 153, 153);&quot;&gt;// 建议和创建仓库时使用同一个&lt;/span&gt;
+&lt;span style=&quot;box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;&quot;&gt;&lt;span style=&quot;box-sizing:border-box;pointer-events:none;display:block;&quot;&gt;&lt;span style=&quot;color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;`&lt;/pre&gt;&lt;/div&gt;
+
+### Next 安装
+
+经过上面步骤创建完本地博客之后，基本的博客系统就已经搭建好了，自带了 landscape 主题。不过该主题不是很符合我的审美，在网上搜索了一下 Hexo 主题，选择了用户量较大的 Next。
+
+[Next](https://app.yinxiang.com/OutboundRedirect.action?dest=https%3A%2F%2Flink.jianshu.com%2F%3Ft%3Dhttps%3A%2F%2Fgithub.com%2Fiissnan%2Fhexo-theme-next) 是 [iissnan](https://app.yinxiang.com/OutboundRedirect.action?dest=https%3A%2F%2Flink.jianshu.com%2F%3Ft%3Dhttps%3A%2F%2Fgithub.com%2Fiissnan) 在 GitHub 上开源的一个 Hexo 主题，主打简洁。选择该主题有如下原因：</code></pre>
+<ul>
+<li><p>  简洁，美观</p>
+</li>
+<li><p>  功能齐全</p>
+</li>
+<li><p>  使用者众多</p>
+</li>
+<li><p>文档齐全</p>
+<blockquote>
+<p>”说明：“在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml</p>
+<pre><code>。 其中，一份位于站点根目录下（即 xxx.github.io 目录下），主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置有主题作者提供，主要用于配置主题相关的选项。为了描述方便，在以下说明中，将前者称为 “**站点配置文件**”， 后者称为 “**主题配置文件**”。</code></pre>
+</blockquote>
+<p>  看下怎么安装主题：</p>
+<p>  <strong>1、切换到上面生成的本地博客目录（xxx.github.io）</strong></p>
+  <div style="box-sizing:border-box;width:100%;margin:0px;padding-bottom:25px;text-align:center;font-size:0px;">
+  <div style="box-sizing:border-box;position:relative;z-index:95;background-color:transparent;transition:background-color 0.1s linear 0s;margin:0px auto;max-width:449px;max-height:258px;">
+  <div style="box-sizing:border-box;z-index:90;padding-bottom:57.46%;"></div>
+  <div style="box-sizing:border-box;position:absolute;top:0px;left:0px;width:100%;height:100%;overflow:hidden;"><div class="en-ignore" data-resource-guid="6fc37d2a-92fb-48b6-80c6-82453b55124b" style="display: inline-block; text-align: left; background-color: #ecf0f3; border: 1px solid #bec6cb; min-width: 196px; max-width: 588px; padding: 4px 6px 5px; margin-bottom: 1em; height: 34px;">[![](https://app.yinxiang.com/images/file-generic.png) webp
+  <span class="en-ignore" style="font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;"> 8.3 KB</span>
+  ](https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/6fc37d2a-92fb-48b6-80c6-82453b55124b/webp)</div></div>
+  </div>
+  <div style="box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);">切换到本地博客目录</div>
+  </div>
+
+<p>  Mac OS 的终端上类似，把 dir 替换为 ls 即可。</p>
+<p>  <strong>2、安装 Next 主题</strong></p>
+  <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`git clone https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>github<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>iissnan<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexo<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>next themes<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>next
+  或在 <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Mac</span> 上
+  $ git clone https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>github<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>iissnan<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexo<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>next themes<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>next
+  <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span></span>`</pre></div>
+
+<p>  <strong>3、使用 Next 主题</strong></p>
+<p>  <strong>首先，</strong>复制一份打开本地博客目录下的 <strong>_config.yml</strong> 文件，命名为 <strong>_config_bak.yml</strong>，做为备份，以防改错</p>
+<p>  <strong>然后，</strong>使用文本编辑器打开本地博客目录下的 <strong>_config.yml</strong> 文件，搜索，定位 theme 键值，将 theme 的值修改为 next</p>
+  <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> next <span style="box-sizing:border-box;color:rgb(153, 153, 153);">//刚刚安装的主题名称</span>
+  <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span></span>`</pre></div>
+  > **注意：**该配置文件中的键值之间一定要有**空格**，否则轻则没有作用，重则报错，无法启动。
+
+<p>  <strong>4、站点配置文件基本项修改</strong></p>
+<p>  关于 Hexo 配置的详细信息请前往 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://hexo.io/zh-cn/docs/configuration.html">Hexo的官方文档</a>。</p>
+<p>  这里先看看最基础的配置，也就是必须要改动的：</p>
+  <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`title<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> xxx  # 博客的名字，也称站点名称
+
+<p>  author<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> xxx # 作者名字</p>
+<p>  description<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> xxx # 对站点的描述，搜索引擎会抓取，可以自定义（这个还是加上比较好）</p>
+<p>  language<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> zh<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Hans</span> # 语言 简体中文</p>
+<p>  theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> next  # 配置主题</p>
+<p>  deploy<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> # 部署相关配置</p>
+<pre><code>  type&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt; git # 使用 &lt;span style=&quot;box-sizing:border-box;color:rgb(248, 197, 85);&quot;&gt;Git&lt;/span&gt; 提交
+  repo&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt; https&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;github&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;com&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;xxx&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;xxx&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;github&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;io&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;git # 就是存放博客的仓库地址</code></pre>
+<p>  <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">4</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">5</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">6</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">7</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">8</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">9</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">10</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">11</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">12</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">13</span></span></span>`</pre></div></p>
+<p>  上述配置是必须要修改的，再次强调，键值之间一定要 ”<strong>加空格</strong>“，请在文本编辑器中搜索定位后再修改。</p>
+<p>  <strong>站点配置文件详细配置示例</strong></p>
+  <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`# <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Hexo</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Configuration</span>
+  ## <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Docs</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexo<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>io<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>docs<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>configuration<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>html
+  ## <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Source</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>github<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexojs<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexo<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>
+
+<h1 id="Site-这里的配置，哪项配置反映在哪里，可以参考我的博客"><a href="#Site-这里的配置，哪项配置反映在哪里，可以参考我的博客" class="headerlink" title="Site 这里的配置，哪项配置反映在哪里，可以参考我的博客"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Site</span> 这里的配置，哪项配置反映在哪里，可以参考我的博客</h1><p>  title<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> xxx # 博客的名字，也称站点名称<br>  subtitle<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> xxx # 副标题<br>  description<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> xxx # 对站点的描述，搜索引擎会抓取，可以自定义<br>  author<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> xxx # 作者名字<br>  language<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> zh<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Hans</span> # 语言 简体中文<br>  timezone<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>  # 用默认的即可</p>
+<h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><h1 id="这项暂时不需要配置，绑定域名后，要创建-sitemap-xml-时再配置该项"><a href="#这项暂时不需要配置，绑定域名后，要创建-sitemap-xml-时再配置该项" class="headerlink" title="这项暂时不需要配置，绑定域名后，要创建 sitemap.xml 时再配置该项"></a>这项暂时不需要配置，绑定域名后，要创建 sitemap<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>xml 时再配置该项</h1><h2 id="If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child-39-and-root-as-‘-child-‘"><a href="#If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child-39-and-root-as-‘-child-‘" class="headerlink" title="If your site is put in a subdirectory, set url as ‘http://yoursite.com/child&#39; and root as ‘/child/‘"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">If</span> your site is put in a subdirectory<span style="box-sizing:border-box;color:rgb(204, 204, 204);">,</span> set url as <span style="box-sizing:border-box;color:rgb(126, 198, 153);">‘<a target="_blank" rel="noopener" href="http://yoursite.com/child&#39;">http://yoursite.com/child&#39;</a></span> and root as <span style="box-sizing:border-box;color:rgb(126, 198, 153);">‘/child/‘</span></h2><p>  url<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> # http<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>xxx<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com<br>  root<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><br>  permalink<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>year<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>month<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>day<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>title<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><br>  permalink_defaults<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span></p>
+<h1 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Directory</span></h1><h1 id="目录，不要修改"><a href="#目录，不要修改" class="headerlink" title="目录，不要修改"></a>目录，不要修改</h1><p>  source_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> source<br>  public_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(204, 153, 205);">public</span><br>  tag_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> tags<br>  archive_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> archives<br>  category_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> categories<br>  code_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> downloads<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>code<br>  i18n_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>lang<br>  skip_render<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span></p>
+<h1 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Writing</span></h1><h1 id="文章布局、写作格式的定义，不修改"><a href="#文章布局、写作格式的定义，不修改" class="headerlink" title="文章布局、写作格式的定义，不修改"></a>文章布局、写作格式的定义，不修改</h1><p>  new_post_name<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>title<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>md # <span style="box-sizing:border-box;color:rgb(248, 197, 85);">File</span> name of <span style="box-sizing:border-box;color:rgb(204, 153, 205);">new</span> posts<br>  default_layout<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> post<br>  titlecase<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span> # <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Transform</span> title into titlecase<br>  external_link<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span> # <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Open</span> external links in <span style="box-sizing:border-box;color:rgb(204, 153, 205);">new</span> tab<br>  filename_case<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">0</span><br>  render_drafts<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span><br>  post_asset_folder<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span><br>  relative_link<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span><br>  future<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span><br>  highlight<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span></p>
+<pre><code>enable&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;box-sizing:border-box;color:rgb(240, 141, 73);&quot;&gt;true&lt;/span&gt;
+line_number&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;box-sizing:border-box;color:rgb(240, 141, 73);&quot;&gt;true&lt;/span&gt;
+auto_detect&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt; &lt;span style=&quot;box-sizing:border-box;color:rgb(240, 141, 73);&quot;&gt;false&lt;/span&gt;
+tab_replace&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt;</code></pre>
+<h1 id="Category-amp-Tag"><a href="#Category-amp-Tag" class="headerlink" title="Category &amp; Tag"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Category</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">&amp;</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Tag</span></h1><p>  default_category<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> uncategorized<br>  category_map<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><br>  tag_map<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span></p>
+<h1 id="Date-Time-format"><a href="#Date-Time-format" class="headerlink" title="Date / Time format"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Date</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Time</span> format</h1><h1 id="日期-时间-格式，不要修改"><a href="#日期-时间-格式，不要修改" class="headerlink" title="日期 / 时间 格式，不要修改"></a>日期 <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span> 时间 格式，不要修改</h1><h2 id="Hexo-uses-Moment-js-to-parse-and-display-date"><a href="#Hexo-uses-Moment-js-to-parse-and-display-date" class="headerlink" title="Hexo uses Moment.js to parse and display date"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Hexo</span> <span style="box-sizing:border-box;color:rgb(204, 153, 205);">uses</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Moment</span><span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>js <span style="box-sizing:border-box;color:rgb(204, 153, 205);">to</span> parse and display date</h2><h2 id="You-can-customize-the-date-format-as-defined-in"><a href="#You-can-customize-the-date-format-as-defined-in" class="headerlink" title="You can customize the date format as defined in"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">You</span> can customize the date format as defined in</h2><h2 id="http-momentjs-com-docs-displaying-format"><a href="#http-momentjs-com-docs-displaying-format" class="headerlink" title="http://momentjs.com/docs/#/displaying/format/"></a>http<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>momentjs<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>docs<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>#<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>displaying<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>format<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span></h2><p>  date_format<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> MMM <span style="box-sizing:border-box;color:rgb(248, 197, 85);">D</span> YYYY<br>  time_format<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">H</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>mm<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>ss</p>
+<h1 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Pagination</span></h1><h1 id="每页显示文章数，可以自定义"><a href="#每页显示文章数，可以自定义" class="headerlink" title="每页显示文章数，可以自定义"></a>每页显示文章数，可以自定义</h1><h2 id="Set-per-page-to-0-to-disable-pagination"><a href="#Set-per-page-to-0-to-disable-pagination" class="headerlink" title="Set per_page to 0 to disable pagination"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Set</span> per_page <span style="box-sizing:border-box;color:rgb(204, 153, 205);">to</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">0</span> <span style="box-sizing:border-box;color:rgb(204, 153, 205);">to</span> disable pagination</h2><p>  per_page<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">10</span><br>  pagination_dir<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> page</p>
+<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Extensions</span></h1><h1 id="配置站点所用主题和插件，这里将默认主题注释，修改为-next"><a href="#配置站点所用主题和插件，这里将默认主题注释，修改为-next" class="headerlink" title="配置站点所用主题和插件，这里将默认主题注释，修改为 next"></a>配置站点所用主题和插件，这里将默认主题注释，修改为 next</h1><h2 id="Plugins-https-hexo-io-plugins"><a href="#Plugins-https-hexo-io-plugins" class="headerlink" title="Plugins: https://hexo.io/plugins/"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Plugins</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexo<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>io<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>plugins<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span></h2><h2 id="Themes-https-hexo-io-themes"><a href="#Themes-https-hexo-io-themes" class="headerlink" title="Themes: https://hexo.io/themes/"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Themes</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexo<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>io<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>themes<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span></h2><p>  theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> next<br>  #theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> landscape</p>
+<h1 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h1><h1 id="注意：是-xxx-github-io-source-下的开始的相对路径，如果-source-文件夹下面没有-uploads-文件夹，那么新建一个。考虑到会博客中用很多图片，在-uploads-文件夹下请分好类，避免混乱"><a href="#注意：是-xxx-github-io-source-下的开始的相对路径，如果-source-文件夹下面没有-uploads-文件夹，那么新建一个。考虑到会博客中用很多图片，在-uploads-文件夹下请分好类，避免混乱" class="headerlink" title="注意：是 xxx.github.io/source 下的开始的相对路径，如果 source 文件夹下面没有 uploads 文件夹，那么新建一个。考虑到会博客中用很多图片，在 uploads 文件夹下请分好类，避免混乱"></a>注意：是 xxx<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>github<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>io<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>source 下的开始的相对路径，如果 source 文件夹下面没有 uploads 文件夹，那么新建一个。考虑到会博客中用很多图片，在 uploads 文件夹下请分好类，避免混乱</h1><p>  avatar<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>uploads<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>images<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>avatar<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>jpg</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Deployment</span></h1><h1 id="本地博客部署到-github-上要配置这里"><a href="#本地博客部署到-github-上要配置这里" class="headerlink" title="本地博客部署到 github 上要配置这里"></a>本地博客部署到 github 上要配置这里</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Docs</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>hexo<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>io<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>docs<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>deployment<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>html</h2><p>  deploy<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span></p>
+<pre><code>type&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt; git # 使用 &lt;span style=&quot;box-sizing:border-box;color:rgb(248, 197, 85);&quot;&gt;Git&lt;/span&gt; 提交
+repository&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt; https&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;:&lt;/span&gt;&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;github&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;com&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;xxx&lt;span style=&quot;box-sizing:border-box;color:rgb(103, 205, 204);&quot;&gt;/&lt;/span&gt;xxx&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;github&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;io&lt;span style=&quot;box-sizing:border-box;color:rgb(204, 204, 204);&quot;&gt;.&lt;/span&gt;git # 就是存放博客的仓库地址</code></pre>
+<p>  <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">4</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">5</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">6</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">7</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">8</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">9</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">10</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">11</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">12</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">13</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">14</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">15</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">16</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">17</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">18</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">19</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">20</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">21</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">22</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">23</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">24</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">25</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">26</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">27</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">28</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">29</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">30</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">31</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">32</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">33</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">34</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">35</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">36</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">37</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">38</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">39</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">40</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">41</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">42</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">43</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">44</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">45</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">46</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">47</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">48</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">49</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">50</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">51</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">52</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">53</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">54</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">55</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">56</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">57</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">58</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">59</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">60</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">61</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">62</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">63</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">64</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">65</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">66</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">67</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">68</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">69</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">70</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">71</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">72</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">73</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">74</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">75</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">76</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">77</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">78</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">79</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">80</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">81</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">82</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">83</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">84</span></span></span>`</pre></div></p>
+<blockquote>
+<p>PS：是不是有点迫不及待想看看效果了，那好，先在本地跑起来试试，步骤如下：</p>
+</blockquote>
+</li>
+</ul>
+<ol>
+<li><p> 打开命令行，定位到 xxx.github.io 目录</p>
+</li>
+<li><p>输入命令：</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`hexo s # <span style="box-sizing:border-box;color:rgb(103, 205, 204);">==</span> hexo server #启动服务预览
+ $ hexo s
+ <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span></span>`</pre></div>
+</li>
+<li><p>启动成功可以看到提示，按照提示用浏览器打开提示网址，即可看到你的本地博客了，里面有一篇 Hello World</p>
+ <div style="box-sizing:border-box;width:100%;margin:0px;padding-bottom:25px;text-align:center;font-size:0px;">
+ <div style="box-sizing:border-box;position:relative;z-index:95;background-color:transparent;transition:background-color 0.1s linear 0s;margin:0px auto;max-width:570px;max-height:75px;">
+ <div style="box-sizing:border-box;z-index:90;padding-bottom:13.16%;"></div>
+ <div style="box-sizing:border-box;position:absolute;top:0px;left:0px;width:100%;height:100%;overflow:hidden;"><div class="en-ignore" data-resource-guid="1eca6b31-5d62-4e92-a482-bf4b98c781ef" style="display: inline-block; text-align: left; background-color: #ecf0f3; border: 1px solid #bec6cb; min-width: 196px; max-width: 588px; padding: 4px 6px 5px; margin-bottom: 1em; height: 34px;">[![](https://app.yinxiang.com/images/file-generic.png) webp
+ <span class="en-ignore" style="font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;"> 5.7 KB</span>
+ ](https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/1eca6b31-5d62-4e92-a482-bf4b98c781ef/webp)</div></div>
+ </div>
+ <div style="box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);">hexo s 命令成功提示</div>
+ </div>
+
+<p> 看完效果之后继续学习下面的内容…</p>
+<h1 id="三、Next-配置"><a href="#三、Next-配置" class="headerlink" title="三、Next 配置"></a>三、Next 配置</h1><p> 当然，最权威的是看<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://theme-next.iissnan.com/getting-started.html%23theme-settings">官方的说明文档</a>，我在这里提供一个示例，供大家参考，你可以直接拷过去稍微改动一点就行。</p>
+<h2 id="Next-配置详解"><a href="#Next-配置详解" class="headerlink" title="Next 配置详解"></a>Next 配置详解</h2><p> Next 配置就是上面所说的”<strong>主题配置文件</strong>“，位于 xxx.github.io/themes/next 目录下，文件名为 <strong>_config.yml</strong>。老规矩，先备份一份 ”<strong>_config_bak.yml</strong>“，以防改错。</p>
+<p> 以<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://diy-green.github.io">我的博客</a>为例，阐述一下需要配置的地方：</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`# <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Set</span> <span style="box-sizing:border-box;color:rgb(204, 153, 205);">default</span> keywords <span style="box-sizing:border-box;color:rgb(204, 204, 204);">(</span><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Use</span> a comma <span style="box-sizing:border-box;color:rgb(204, 153, 205);">to</span> separate<span style="box-sizing:border-box;color:rgb(204, 204, 204);">)</span>
+ # 设置关键字
+ keywords<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"Android, DIY"</span>
+
+<h1 id="Specify-the-date-when-the-site-was-setup"><a href="#Specify-the-date-when-the-site-was-setup" class="headerlink" title="Specify the date when the site was setup"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Specify</span> the date when the site was setup</h1><h1 id="设置博客开始时间"><a href="#设置博客开始时间" class="headerlink" title="设置博客开始时间"></a>设置博客开始时间</h1><p> since<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">2016</span></p>
+<h1 id="When-running-the-site-in-a-subdirectory-e-g-domain-tld-blog-remove-the-leading-slash-archives-gt-archives"><a href="#When-running-the-site-in-a-subdirectory-e-g-domain-tld-blog-remove-the-leading-slash-archives-gt-archives" class="headerlink" title="When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -&gt; archives)"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">When</span> running the site in a subdirectory <span style="box-sizing:border-box;color:rgb(204, 204, 204);">(</span>e<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>g<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span> domain<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>tld<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>blog<span style="box-sizing:border-box;color:rgb(204, 204, 204);">)</span><span style="box-sizing:border-box;color:rgb(204, 204, 204);">,</span> remove the leading slash <span style="box-sizing:border-box;color:rgb(204, 204, 204);">(</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>archives <span style="box-sizing:border-box;color:rgb(103, 205, 204);">-&gt;</span> archives<span style="box-sizing:border-box;color:rgb(204, 204, 204);">)</span></h1><h1 id="设置菜单，就是-我的博客-http-diy-green-github-io-左侧那一列"><a href="#设置菜单，就是-我的博客-http-diy-green-github-io-左侧那一列" class="headerlink" title="设置菜单，就是[我的博客](http://diy-green.github.io)左侧那一列"></a>设置菜单，就是<span style="box-sizing:border-box;color:rgb(204, 204, 204);">[</span>我的博客<span style="box-sizing:border-box;color:rgb(204, 204, 204);">]</span><span style="box-sizing:border-box;color:rgb(204, 204, 204);">(</span>http<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>diy<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>green<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>github<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>io<span style="box-sizing:border-box;color:rgb(204, 204, 204);">)</span>左侧那一列</h1><p> menu<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><br>   home<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span> # 在菜单上显示首页<br>   archives<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>archives # 在菜单删显示全部<br>   categories<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>categories # 在菜单上显示 分类<br>   tags<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>tags # 在菜单上显示 标签<br>   about<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>about # 在菜单上显示 关于<br>   #commonweal<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">404.</span>html</p>
+<h1 id="Schemes"><a href="#Schemes" class="headerlink" title="Schemes"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Schemes</span></h1><h1 id="设置风格"><a href="#设置风格" class="headerlink" title="设置风格"></a>设置风格</h1><p> #scheme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Muse</span><br> #scheme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Mist</span><br> scheme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Pisces</span> # 我的就是这个双栏风格</p>
+<h1 id="Automatically-Excerpt-Not-recommand"><a href="#Automatically-Excerpt-Not-recommand" class="headerlink" title="Automatically Excerpt. Not recommand."></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Automatically</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Excerpt</span><span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Not</span> recommand<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span></h1><h1 id="Please-use-lt-–-more-–-gt-in-the-post-to-control-excerpt-accurately"><a href="#Please-use-lt-–-more-–-gt-in-the-post-to-control-excerpt-accurately" class="headerlink" title="Please use &lt;!– more –&gt; in the post to control excerpt accurately."></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Please</span> use <span style="box-sizing:border-box;color:rgb(103, 205, 204);">&lt;</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">!</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">–</span> more <span style="box-sizing:border-box;color:rgb(103, 205, 204);">–</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">&gt;</span> in the post <span style="box-sizing:border-box;color:rgb(204, 153, 205);">to</span> control excerpt accurately<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span></h1><p> auto_excerpt<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><br>   enable<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span> # 设置是否显示阅读全文，文章较多的话，有必要设置为 <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span><br>   length<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">150</span></p>
+<h1 id="一些第三方服务设置，这里只提一下”多说“，其他的请参考官方介绍"><a href="#一些第三方服务设置，这里只提一下”多说“，其他的请参考官方介绍" class="headerlink" title="一些第三方服务设置，这里只提一下”多说“，其他的请参考官方介绍"></a>一些第三方服务设置，这里只提一下”多说“，其他的请参考官方介绍</h1><h1 id="Make-duoshuo-show-UA"><a href="#Make-duoshuo-show-UA" class="headerlink" title="Make duoshuo show UA"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Make</span> duoshuo show UA</h1><h1 id="user-id-must-NOT-be-null-when-admin-enable-is-true"><a href="#user-id-must-NOT-be-null-when-admin-enable-is-true" class="headerlink" title="user_id must NOT be null when admin_enable is true!"></a>user_id must NOT be <span style="box-sizing:border-box;color:rgb(204, 153, 205);">null</span> when admin_enable is <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">!</span></h1><h1 id="you-can-visit-http-dev-duoshuo-com-get-duoshuo-user-id"><a href="#you-can-visit-http-dev-duoshuo-com-get-duoshuo-user-id" class="headerlink" title="you can visit http://dev.duoshuo.com get duoshuo user id."></a>you can visit http<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>dev<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>duoshuo<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com get duoshuo user id<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span></h1><p> duoshuo_info<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><br>   ua_enable<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span><br>   admin_enable<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span><br>   user_id<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">0</span> # <span style="box-sizing:border-box;color:rgb(103, 205, 204);"><em></span><span style="box-sizing:border-box;color:rgb(103, 205, 204);"></em></span>这里不要动，千万别动<span style="box-sizing:border-box;color:rgb(103, 205, 204);"><em></span><span style="box-sizing:border-box;color:rgb(103, 205, 204);"></em></span><br>   admin_nickname<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> DIY<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>green</p>
+<h1 id="Code-Highlight-theme"><a href="#Code-Highlight-theme" class="headerlink" title="Code Highlight theme"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Code</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Highlight</span> theme</h1><h1 id="Available-value"><a href="#Available-value" class="headerlink" title="Available value:"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Available</span> value<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span></h1><h1 id="normal-night-night-eighties-night-blue-night-bright"><a href="#normal-night-night-eighties-night-blue-night-bright" class="headerlink" title="normal | night | night eighties | night blue | night bright"></a>normal <span style="box-sizing:border-box;color:rgb(103, 205, 204);">|</span> night <span style="box-sizing:border-box;color:rgb(103, 205, 204);">|</span> night eighties <span style="box-sizing:border-box;color:rgb(103, 205, 204);">|</span> night blue <span style="box-sizing:border-box;color:rgb(103, 205, 204);">|</span> night bright</h1><h1 id="https-github-com-chriskempson-tomorrow-theme"><a href="#https-github-com-chriskempson-tomorrow-theme" class="headerlink" title="https://github.com/chriskempson/tomorrow-theme"></a>https<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>github<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>chriskempson<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>tomorrow<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>theme</h1><p> #highlight_theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> normal</p>
+<h1 id="代码高亮主题"><a href="#代码高亮主题" class="headerlink" title="代码高亮主题"></a>代码高亮主题</h1><p> highlight_theme<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> night eighties</p>
+<h1 id="打赏配置"><a href="#打赏配置" class="headerlink" title="打赏配置"></a>打赏配置</h1><h1 id="打赏说明文本"><a href="#打赏说明文本" class="headerlink" title="打赏说明文本"></a>打赏说明文本</h1><p> reward_comment<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> 坚持原创技术分享，您的支持将鼓励我继续创作！</p>
+<h1 id="微信收款二维码"><a href="#微信收款二维码" class="headerlink" title="微信收款二维码"></a>微信收款二维码</h1><p> wechatpay<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>uploads<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>images<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>wechat<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>reward<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>image<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>png</p>
+<h1 id="支付宝收款二维码"><a href="#支付宝收款二维码" class="headerlink" title="支付宝收款二维码"></a>支付宝收款二维码</h1><p> alipay<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>uploads<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>images<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>alipay<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>reward<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>image<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>png</p>
+<h1 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h1><p> links_title<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Links</span><br> links<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><br>   DIY<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>green简书<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> http<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>www<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>jianshu<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>com<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>users<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">0</span>ad0a0afc409<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>latest_articles</p>
+<h1 id="订阅微信公众号"><a href="#订阅微信公众号" class="headerlink" title="订阅微信公众号"></a>订阅微信公众号</h1><h1 id="Wechat-Subscriber"><a href="#Wechat-Subscriber" class="headerlink" title="Wechat Subscriber"></a><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Wechat</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Subscriber</span></h1><p> #wechat_subscriber<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span></p>
+<h1 id="enabled-true"><a href="#enabled-true" class="headerlink" title="enabled: true"></a>enabled<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">true</span></h1><h1 id="qcode-uploads-wechat-qcode-jpg"><a href="#qcode-uploads-wechat-qcode-jpg" class="headerlink" title="qcode: /uploads/wechat-qcode.jpg"></a>qcode<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>uploads<span style="box-sizing:border-box;color:rgb(103, 205, 204);">/</span>wechat<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>qcode<span style="box-sizing:border-box;color:rgb(204, 204, 204);">.</span>jpg</h1><h1 id="description-欢迎您扫一扫上面的微信公众号，订阅我的博客！"><a href="#description-欢迎您扫一扫上面的微信公众号，订阅我的博客！" class="headerlink" title="description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！"></a>description<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> 欢迎您扫一扫上面的微信公众号，订阅我的博客！</h1><p> <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">4</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">5</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">6</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">7</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">8</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">9</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">10</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">11</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">12</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">13</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">14</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">15</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">16</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">17</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">18</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">19</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">20</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">21</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">22</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">23</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">24</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">25</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">26</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">27</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">28</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">29</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">30</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">31</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">32</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">33</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">34</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">35</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">36</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">37</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">38</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">39</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">40</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">41</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">42</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">43</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">44</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">45</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">46</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">47</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">48</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">49</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">50</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">51</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">52</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">53</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">54</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">55</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">56</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">57</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">58</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">59</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">60</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">61</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">62</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">63</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">64</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">65</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">66</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">67</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">68</span></span></span>`</pre></div></p>
+<h2 id="创建分类页面"><a href="#创建分类页面" class="headerlink" title="创建分类页面"></a>创建分类页面</h2><p> 先看下添加了分类的效果：</p>
+ <div style="box-sizing:border-box;width:100%;margin:0px;padding-bottom:25px;text-align:center;font-size:0px;">
+ <div style="box-sizing:border-box;position:relative;z-index:95;background-color:transparent;transition:background-color 0.1s linear 0s;margin:0px auto;max-width:683px;max-height:507px;">
+ <div style="box-sizing:border-box;z-index:90;padding-bottom:74.22999999999999%;"></div>
+ <div style="box-sizing:border-box;position:absolute;top:0px;left:0px;width:100%;height:100%;overflow:hidden;"><div class="en-ignore" data-resource-guid="8bf1224d-95b8-4e03-9860-12d6d6958075" style="display: inline-block; text-align: left; background-color: #ecf0f3; border: 1px solid #bec6cb; min-width: 196px; max-width: 588px; padding: 4px 6px 5px; margin-bottom: 1em; height: 34px;">[![](https://app.yinxiang.com/images/file-generic.png) webp
+ <span class="en-ignore" style="font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;"> 18.0 KB</span>
+ ](https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/8bf1224d-95b8-4e03-9860-12d6d6958075/webp)</div></div>
+ </div>
+ <div style="box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);">分类页面效果</div>
+ </div>
+
+<p> <strong>操作步骤</strong></p>
+</li>
+<li><p> 打开命令行，定位到 xxx.github.io 目录</p>
+</li>
+<li><p>新建一个页面，命名为 categories</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`hexo <span style="box-sizing:border-box;color:rgb(204, 153, 205);">new</span> page categories
+ 或
+ $ hexo <span style="box-sizing:border-box;color:rgb(204, 153, 205);">new</span> page categories
+ <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span></span>`</pre></div>
+</li>
+<li><p>根据提示找到新建的 index.md 文件，编辑</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`# 这里有 <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"---"</span>（这会破坏代码展示效果，所以注释了）
+ title<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">All</span> tags 
+ date<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">2016</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">04</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">25</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">11</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">45</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">45</span>
+ type<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"categories"</span> # 将页面的类型设置为 categories
+  ，主题将自动为这个页面显示所有分类
+ comments<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span> # 如果有启用多说 或者 <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Disqus</span> 评论，默认页面也会带有评论。需要关闭的话，设置为 <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span>
+ # 这里也有 <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"---"</span>
+ <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">4</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">5</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">6</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">7</span></span></span>`</pre></div>
+
+<h2 id="创建标签云页面"><a href="#创建标签云页面" class="headerlink" title="创建标签云页面"></a>创建标签云页面</h2><p> 先看下添加了标签云的效果：</p>
+ <div style="box-sizing:border-box;width:100%;margin:0px;padding-bottom:25px;text-align:center;font-size:0px;">
+ <div style="box-sizing:border-box;position:relative;z-index:95;background-color:transparent;transition:background-color 0.1s linear 0s;margin:0px auto;max-width:700px;max-height:356px;">
+ <div style="box-sizing:border-box;z-index:90;padding-bottom:39.6%;"></div>
+ <div style="box-sizing:border-box;position:absolute;top:0px;left:0px;width:100%;height:100%;overflow:hidden;"><div class="en-ignore" data-resource-guid="3d223051-b9c3-40d7-8c9f-a7e81d9565dc" style="display: inline-block; text-align: left; background-color: #ecf0f3; border: 1px solid #bec6cb; min-width: 196px; max-width: 588px; padding: 4px 6px 5px; margin-bottom: 1em; height: 34px;">[![](https://app.yinxiang.com/images/file-generic.png) webp
+ <span class="en-ignore" style="font-size: 11px; font-family: helvetica, sans-serif; font-weight: 400;"> 15.1 KB</span>
+ ](https://app.yinxiang.com/shard/s2/nl/1059279/8c288823-69cf-4180-9d73-dd49aad0d094/res/3d223051-b9c3-40d7-8c9f-a7e81d9565dc/webp)</div></div>
+ </div>
+ <div style="box-sizing:border-box;min-width:20%;max-width:80%;min-height:43px;display:inline-block;padding:10px;margin:0px auto;border-bottom:1px solid rgb(238, 238, 238);font-size:13px;color:rgb(153, 153, 153);">标签云页面效果</div>
+ </div>
+
+<p> <strong>操作步骤</strong></p>
+</li>
+<li><p> 打开命令行，定位到 xxx.github.io 目录</p>
+</li>
+<li><p>新建一个页面，命名为 tags</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`hexo <span style="box-sizing:border-box;color:rgb(204, 153, 205);">new</span> page <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"tags"</span>
+ 或
+ $ hexo <span style="box-sizing:border-box;color:rgb(204, 153, 205);">new</span> page <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"tags"</span>
+ <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span></span>`</pre></div>
+</li>
+<li><p>根据提示找到新建的 index.md 文件，编辑</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`# 这里有 <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"---"</span>
+ title<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">All</span> tags 
+ date<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">2016</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">04</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">27</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">08</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">56</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span><span style="box-sizing:border-box;color:rgb(240, 141, 73);">40</span>
+ type<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"tags"</span> # 将页面的类型设置为 tags
+  ，主题将自动为这个页面显示标签云
+ comments<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span> # 如果有启用多说 或者 <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Disqus</span> 评论，默认页面也会带有评论。需要关闭的话，设置为 <span style="box-sizing:border-box;color:rgb(240, 141, 73);">false</span>
+ # 这里也有 <span style="box-sizing:border-box;color:rgb(126, 198, 153);">"---"</span>
+ <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">4</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">5</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">6</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">7</span></span></span>`</pre></div>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2></li>
+<li><p>格式<br> 再次强调，设置项的键值之间<strong>一定要有空格</strong></p>
+</li>
+<li><p>菜单上显示 ”分类“ 等栏目<br> 如果需要在菜单上显示 ”分类“ 和 ”标签“ 等，那么记得打开注释，或者添加该条目</p>
+</li>
+<li><p>关于第三方服务的 ”duoshuo_info“<br> 在配置该项的时候，user_id 键对应的值不要修改，也就是保持为 0，具体原因我不清楚，如果修改了该值，那么你的博客会变得一片空白</p>
+</li>
+<li><p>分类和标签云页面<br> <strong>首先，</strong>要使用” hexo new page “命令生成这两个页面，否则报404。<strong>其次，</strong>这两个页面是主题自动维护的，只要我们的文章按照规矩来就行了，下面会详细说明</p>
+<h1 id="四、写博客与发布"><a href="#四、写博客与发布" class="headerlink" title="四、写博客与发布"></a>四、写博客与发布</h1><p> 经过上述步骤，本地博客和主题设置已经完成，那么接下来就是写博客了。</p>
+<p> 你的博客文件需要存放到 xxx.github.io/source/_posts 文件夹中，在该文件夹下面你可以按照你的博客分类建立一系列的文件夹来管理博客原文件。</p>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><p> <strong>1、用 Markdown 写文章</strong></p>
+<p> 不管你用什么编辑 Markdown 文件，最后生成的 md 文件放到 xxx.github.io/source/_posts 文件夹或其子文件夹中即可，如：</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`<span style="box-sizing:border-box;color:rgb(103, 205, 204);">--</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>
+ title<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span> 个人博客搭建详解（<span style="box-sizing:border-box;color:rgb(248, 197, 85);">Windows</span>和<span style="box-sizing:border-box;color:rgb(248, 197, 85);">Mac</span>通用版） # 这是标题
+ categories<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>  # 这里写的分类会自动汇集到 categories 页面上，分类可以多级
+ <span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span> 实用技术 # 一级分类
+ <span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span> 个人博客 # 二级分类 
+ tags<span style="box-sizing:border-box;color:rgb(103, 205, 204);">:</span>   # 这里写的标签会自动汇集到 tags 页面上
+ <span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span> 实用 # 可配置多个标签，注意格式
+ <span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span> 个人博客
+ <span style="box-sizing:border-box;color:rgb(103, 205, 204);">--</span><span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>
+
+<p> <span style="box-sizing:border-box;color:rgb(103, 205, 204);">&gt;</span><span style="box-sizing:border-box;color:rgb(248, 197, 85);">Hexo</span> 是一个基于nodejs 的静态博客网站生成器，作者是来自台湾的 <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Tommy</span> <span style="box-sizing:border-box;color:rgb(248, 197, 85);">Chen</span><br> <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">4</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">5</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">6</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">7</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">8</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">9</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">10</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">11</span></span></span>`</pre></div></p>
+<p> <strong>注意：</strong>分类和标签是自动维护的，关键是的文章要按照规定的格式写，如上格式，可以参考。</p>
+<blockquote>
+<p><strong>说明：</strong>Next 主题会自动生成目录，这也省了不少事。</p>
+</blockquote>
+<p> <strong>2、在本地运行测试</strong></p>
+<p> 打开命令行定位到 xxx.github.io 目录，输入命令：</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`hexo s # 这是简写 <span style="box-sizing:border-box;color:rgb(103, 205, 204);">==</span> hexo server # 启动服务预览
+ 或
+ $ hexo s
+ <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span></span>`</pre></div>
+
+<p> <strong>3、在浏览器查看效果</strong></p>
+<p> 在浏览器中输入 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://localhost:4000">http://localhost:4000</a> 访问本地博客，看看效果吧</p>
+<p> <strong>4、安装自动部署发布工具</strong></p>
+<p> 这里用到了 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a>，使用如下命令安装：</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`npm install hexo<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>deployer<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>git <span style="box-sizing:border-box;color:rgb(103, 205, 204);">--</span>save
+ 或
+ $ npm install hexo<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>deployer<span style="box-sizing:border-box;color:rgb(103, 205, 204);">-</span>git <span style="box-sizing:border-box;color:rgb(103, 205, 204);">--</span>save
+ <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span></span>`</pre></div>
+
+<p> **5、发布到 GitHubPages **</p>
+<p> 确认在本地上显示无误之后，就可以将 md 转为 静态网页文件，然后发布到 GitHubPages 上去了。</p>
+ <div style="box-sizing:border-box;position:relative;overflow:hidden;"><pre style="box-sizing:border-box;text-align:left;word-spacing:normal;tab-size:4;hyphens:none;margin:0.5em 0px;overflow:auto;overflow-x:scroll;overscroll-behavior-x:contain;border-radius:4px;z-index:0;font-size:12px;font-family:Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace;margin-top:0px;margin-bottom:20px;overflow-wrap:normal;word-break:break-all;white-space:pre;padding:1em;line-height:1.5;color:rgb(204, 204, 204);position:relative;padding-left:3.8em;background:rgb(45, 45, 45);" xml:space="preserve">`hexo clean #清除缓存 网页正常情况下可以忽略此条命令
+ hexo g #生成静态网页
+ hexo d #开始部署
+
+<p> 也可以一次性执行<br> hexo clean <span style="box-sizing:border-box;color:rgb(103, 205, 204);">&amp;&amp;</span> hexo g <span style="box-sizing:border-box;color:rgb(103, 205, 204);">&amp;&amp;</span> hexo d<br> <span style="box-sizing:border-box;position:absolute;pointer-events:none;top:0px;font-size:100%;left:-3.8em;width:3em;letter-spacing:-1px;border-right:1px solid rgb(153, 153, 153);user-select:none;"><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">1</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">2</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">3</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">4</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">5</span></span><span style="box-sizing:border-box;pointer-events:none;display:block;"><span style="color:rgb(153, 153, 153);display:block;padding-right:0.8em;text-align:right;">6</span></span></span></p>
+</div>
+
+</li>
+</ol>
+<p>如果是第一次部署，终端会提示要求输入用户名和密码。等命令执行完之后，过几分钟打开 <a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://xxx.github.io">http://xxx.github.io</a> 即可看到你的个人博客了。以后要发布新文章，执行上述命令即可。</p>
+<h2 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li><p>Git 的 bug</p>
+<p> 有个老版本的 Git 有个 bug，上传的时候会提示非法域名这类的，要解决该问题，最简单的方法就是更新 Git，用最新版的 Git</p>
+</li>
+<li><p>关于页面空白</p>
+<p> 主题配置文件中的 ”<strong>duoshuo_info</strong>“ 下的 ”user_id“ 如果是非 ”0“，会导致该问题</p>
+</li>
+<li><p>特殊字符导致报错</p>
+<p> 如添加新博客的时候报错了，而且提示的是 js 中某些地方报错，那么很可能是 md 文件中存在<strong>特殊字符</strong>（不是正常显示的字符，不是说特殊符号，能正常显示的都不是这里说的<strong>特殊字符</strong>），把特殊字符删除即可</p>
+</li>
+<li><p>Hexo 命令的常见报错</p>
+<p> 可以参考这篇文章：<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://www.jianshu.com/p/465830080ea9%23">HEXO+Github,搭建属于自己的博客</a></p>
+</li>
+<li><p>使用hexo，如果换了电脑怎么更新博客？</p>
+<p> 这个问题相信大家都关心，知乎上有<a target="_blank" rel="noopener" href="https://app.yinxiang.com/OutboundRedirect.action?dest=https://link.jianshu.com/?t=http://www.zhihu.com/question/21193762">比较详细的解答</a>。我说一下我的解决方法吧！</p>
+<p> <strong>方案一：</strong></p>
+<p> 在新电脑上配置好本地博客环境，然后，直接拷贝原电脑上的 xxx.github.io 文件夹到新电脑上即可。</p>
+<p> <strong>方案二：</strong></p>
+<p> 将 xxx.github.io 文件夹同步到网上(如：Dropbox 等)，其他任何电脑（配置好了本地博客环境）要用的时候，从网上同步下来即可。</div></div></div></div></div></div></div></div></div></p>
+</div>
+</div></div>
+
+</li>
+</ol>
+</body></html>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>支持一下,来杯咖啡吧-_-</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt=" 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt=" 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/12/16/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/StephenZSIR" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:zzn0115@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://diy-green.github.io/" title="DIY-green博客" target="_blank">DIY-green博客</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">一、技术选型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%96%B9%E6%A1%88"><span class="nav-number">1.1.</span> <span class="nav-text">常见个人博客搭建方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%89%E6%8B%A9-GitHubPages-Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">选择 GitHubPages + Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.3.</span> <span class="nav-text">Hexo 简介</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA"><span class="nav-number">2.</span> <span class="nav-text">二、博客搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-GitHub-%E4%BB%93%E5%BA%93"><span class="nav-number">2.1.</span> <span class="nav-text">创建 GitHub 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C-%E7%99%BB%E5%BD%95"><span class="nav-number">2.1.1.</span> <span class="nav-text">注册&#x2F;登录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93"><span class="nav-number">2.2.</span> <span class="nav-text">创建仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">2.3.</span> <span class="nav-text">本地环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-%E5%AE%89%E8%A3%85"><span class="nav-number">2.3.1.</span> <span class="nav-text">Git 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-%E4%B8%AD"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">Windows 中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-OS-%E4%B8%AD"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">Mac OS 中</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nodejs%E5%AE%89%E8%A3%85"><span class="nav-number">2.3.2.</span> <span class="nav-text">Nodejs安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows-%E4%B8%AD-1"><span class="nav-number">2.3.2.1.</span> <span class="nav-text">Windows 中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-OS-%E4%B8%AD-1"><span class="nav-number">2.3.2.2.</span> <span class="nav-text">Mac OS 中</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-%E5%AE%89%E8%A3%85"><span class="nav-number">2.3.3.</span> <span class="nav-text">Hexo 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows-%E4%B8%AD-2"><span class="nav-number">2.3.4.</span> <span class="nav-text">Windows 中</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Site-%E8%BF%99%E9%87%8C%E7%9A%84%E9%85%8D%E7%BD%AE%EF%BC%8C%E5%93%AA%E9%A1%B9%E9%85%8D%E7%BD%AE%E5%8F%8D%E6%98%A0%E5%9C%A8%E5%93%AA%E9%87%8C%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%8F%82%E8%80%83%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="nav-number">3.</span> <span class="nav-text">Site 这里的配置，哪项配置反映在哪里，可以参考我的博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#URL"><span class="nav-number">4.</span> <span class="nav-text">URL</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%99%E9%A1%B9%E6%9A%82%E6%97%B6%E4%B8%8D%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%EF%BC%8C%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D%E5%90%8E%EF%BC%8C%E8%A6%81%E5%88%9B%E5%BB%BA-sitemap-xml-%E6%97%B6%E5%86%8D%E9%85%8D%E7%BD%AE%E8%AF%A5%E9%A1%B9"><span class="nav-number">5.</span> <span class="nav-text">这项暂时不需要配置，绑定域名后，要创建 sitemap.xml 时再配置该项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#If-your-site-is-put-in-a-subdirectory-set-url-as-%E2%80%98http-yoursite-com-child-39-and-root-as-%E2%80%98-child-%E2%80%98"><span class="nav-number">5.1.</span> <span class="nav-text">If your site is put in a subdirectory, set url as ‘http:&#x2F;&#x2F;yoursite.com&#x2F;child&#39; and root as ‘&#x2F;child&#x2F;‘</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Directory"><span class="nav-number">6.</span> <span class="nav-text">Directory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%EF%BC%8C%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9"><span class="nav-number">7.</span> <span class="nav-text">目录，不要修改</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Writing"><span class="nav-number">8.</span> <span class="nav-text">Writing</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E5%B8%83%E5%B1%80%E3%80%81%E5%86%99%E4%BD%9C%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%AE%9A%E4%B9%89%EF%BC%8C%E4%B8%8D%E4%BF%AE%E6%94%B9"><span class="nav-number">9.</span> <span class="nav-text">文章布局、写作格式的定义，不修改</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Category-amp-Tag"><span class="nav-number">10.</span> <span class="nav-text">Category &amp; Tag</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Date-Time-format"><span class="nav-number">11.</span> <span class="nav-text">Date &#x2F; Time format</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%97%A5%E6%9C%9F-%E6%97%B6%E9%97%B4-%E6%A0%BC%E5%BC%8F%EF%BC%8C%E4%B8%8D%E8%A6%81%E4%BF%AE%E6%94%B9"><span class="nav-number">12.</span> <span class="nav-text">日期 &#x2F; 时间 格式，不要修改</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-uses-Moment-js-to-parse-and-display-date"><span class="nav-number">12.1.</span> <span class="nav-text">Hexo uses Moment.js to parse and display date</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-can-customize-the-date-format-as-defined-in"><span class="nav-number">12.2.</span> <span class="nav-text">You can customize the date format as defined in</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-momentjs-com-docs-displaying-format"><span class="nav-number">12.3.</span> <span class="nav-text">http:&#x2F;&#x2F;momentjs.com&#x2F;docs&#x2F;#&#x2F;displaying&#x2F;format&#x2F;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Pagination"><span class="nav-number">13.</span> <span class="nav-text">Pagination</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AF%8F%E9%A1%B5%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E6%95%B0%EF%BC%8C%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%AE%9A%E4%B9%89"><span class="nav-number">14.</span> <span class="nav-text">每页显示文章数，可以自定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Set-per-page-to-0-to-disable-pagination"><span class="nav-number">14.1.</span> <span class="nav-text">Set per_page to 0 to disable pagination</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Extensions"><span class="nav-number">15.</span> <span class="nav-text">Extensions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E7%AB%99%E7%82%B9%E6%89%80%E7%94%A8%E4%B8%BB%E9%A2%98%E5%92%8C%E6%8F%92%E4%BB%B6%EF%BC%8C%E8%BF%99%E9%87%8C%E5%B0%86%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E6%B3%A8%E9%87%8A%EF%BC%8C%E4%BF%AE%E6%94%B9%E4%B8%BA-next"><span class="nav-number">16.</span> <span class="nav-text">配置站点所用主题和插件，这里将默认主题注释，修改为 next</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Plugins-https-hexo-io-plugins"><span class="nav-number">16.1.</span> <span class="nav-text">Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Themes-https-hexo-io-themes"><span class="nav-number">16.2.</span> <span class="nav-text">Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%B4%E5%83%8F"><span class="nav-number">17.</span> <span class="nav-text">头像</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%EF%BC%9A%E6%98%AF-xxx-github-io-source-%E4%B8%8B%E7%9A%84%E5%BC%80%E5%A7%8B%E7%9A%84%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%EF%BC%8C%E5%A6%82%E6%9E%9C-source-%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E9%9D%A2%E6%B2%A1%E6%9C%89-uploads-%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E9%82%A3%E4%B9%88%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E3%80%82%E8%80%83%E8%99%91%E5%88%B0%E4%BC%9A%E5%8D%9A%E5%AE%A2%E4%B8%AD%E7%94%A8%E5%BE%88%E5%A4%9A%E5%9B%BE%E7%89%87%EF%BC%8C%E5%9C%A8-uploads-%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E8%AF%B7%E5%88%86%E5%A5%BD%E7%B1%BB%EF%BC%8C%E9%81%BF%E5%85%8D%E6%B7%B7%E4%B9%B1"><span class="nav-number">18.</span> <span class="nav-text">注意：是 xxx.github.io&#x2F;source 下的开始的相对路径，如果 source 文件夹下面没有 uploads 文件夹，那么新建一个。考虑到会博客中用很多图片，在 uploads 文件夹下请分好类，避免混乱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Deployment"><span class="nav-number">19.</span> <span class="nav-text">Deployment</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0-github-%E4%B8%8A%E8%A6%81%E9%85%8D%E7%BD%AE%E8%BF%99%E9%87%8C"><span class="nav-number">20.</span> <span class="nav-text">本地博客部署到 github 上要配置这里</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docs-https-hexo-io-docs-deployment-html"><span class="nav-number">20.1.</span> <span class="nav-text">Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81Next-%E9%85%8D%E7%BD%AE"><span class="nav-number">21.</span> <span class="nav-text">三、Next 配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Next-%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3"><span class="nav-number">21.1.</span> <span class="nav-text">Next 配置详解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Specify-the-date-when-the-site-was-setup"><span class="nav-number">22.</span> <span class="nav-text">Specify the date when the site was setup</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%8D%9A%E5%AE%A2%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4"><span class="nav-number">23.</span> <span class="nav-text">设置博客开始时间</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#When-running-the-site-in-a-subdirectory-e-g-domain-tld-blog-remove-the-leading-slash-archives-gt-archives"><span class="nav-number">24.</span> <span class="nav-text">When running the site in a subdirectory (e.g. domain.tld&#x2F;blog), remove the leading slash (&#x2F;archives -&gt; archives)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E8%8F%9C%E5%8D%95%EF%BC%8C%E5%B0%B1%E6%98%AF-%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2-http-diy-green-github-io-%E5%B7%A6%E4%BE%A7%E9%82%A3%E4%B8%80%E5%88%97"><span class="nav-number">25.</span> <span class="nav-text">设置菜单，就是[我的博客](http:&#x2F;&#x2F;diy-green.github.io)左侧那一列</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Schemes"><span class="nav-number">26.</span> <span class="nav-text">Schemes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E9%A3%8E%E6%A0%BC"><span class="nav-number">27.</span> <span class="nav-text">设置风格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Automatically-Excerpt-Not-recommand"><span class="nav-number">28.</span> <span class="nav-text">Automatically Excerpt. Not recommand.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Please-use-lt-%E2%80%93-more-%E2%80%93-gt-in-the-post-to-control-excerpt-accurately"><span class="nav-number">29.</span> <span class="nav-text">Please use &lt;!– more –&gt; in the post to control excerpt accurately.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E4%BA%9B%E7%AC%AC%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1%E8%AE%BE%E7%BD%AE%EF%BC%8C%E8%BF%99%E9%87%8C%E5%8F%AA%E6%8F%90%E4%B8%80%E4%B8%8B%E2%80%9D%E5%A4%9A%E8%AF%B4%E2%80%9C%EF%BC%8C%E5%85%B6%E4%BB%96%E7%9A%84%E8%AF%B7%E5%8F%82%E8%80%83%E5%AE%98%E6%96%B9%E4%BB%8B%E7%BB%8D"><span class="nav-number">30.</span> <span class="nav-text">一些第三方服务设置，这里只提一下”多说“，其他的请参考官方介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Make-duoshuo-show-UA"><span class="nav-number">31.</span> <span class="nav-text">Make duoshuo show UA</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#user-id-must-NOT-be-null-when-admin-enable-is-true"><span class="nav-number">32.</span> <span class="nav-text">user_id must NOT be null when admin_enable is true!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#you-can-visit-http-dev-duoshuo-com-get-duoshuo-user-id"><span class="nav-number">33.</span> <span class="nav-text">you can visit http:&#x2F;&#x2F;dev.duoshuo.com get duoshuo user id.</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-Highlight-theme"><span class="nav-number">34.</span> <span class="nav-text">Code Highlight theme</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Available-value"><span class="nav-number">35.</span> <span class="nav-text">Available value:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#normal-night-night-eighties-night-blue-night-bright"><span class="nav-number">36.</span> <span class="nav-text">normal | night | night eighties | night blue | night bright</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#https-github-com-chriskempson-tomorrow-theme"><span class="nav-number">37.</span> <span class="nav-text">https:&#x2F;&#x2F;github.com&#x2F;chriskempson&#x2F;tomorrow-theme</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E4%B8%BB%E9%A2%98"><span class="nav-number">38.</span> <span class="nav-text">代码高亮主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%93%E8%B5%8F%E9%85%8D%E7%BD%AE"><span class="nav-number">39.</span> <span class="nav-text">打赏配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%89%93%E8%B5%8F%E8%AF%B4%E6%98%8E%E6%96%87%E6%9C%AC"><span class="nav-number">40.</span> <span class="nav-text">打赏说明文本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BE%AE%E4%BF%A1%E6%94%B6%E6%AC%BE%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="nav-number">41.</span> <span class="nav-text">微信收款二维码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%B6%E6%AC%BE%E4%BA%8C%E7%BB%B4%E7%A0%81"><span class="nav-number">42.</span> <span class="nav-text">支付宝收款二维码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5"><span class="nav-number">43.</span> <span class="nav-text">友情链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A2%E9%98%85%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="nav-number">44.</span> <span class="nav-text">订阅微信公众号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Wechat-Subscriber"><span class="nav-number">45.</span> <span class="nav-text">Wechat Subscriber</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#enabled-true"><span class="nav-number">46.</span> <span class="nav-text">enabled: true</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#qcode-uploads-wechat-qcode-jpg"><span class="nav-number">47.</span> <span class="nav-text">qcode: &#x2F;uploads&#x2F;wechat-qcode.jpg</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#description-%E6%AC%A2%E8%BF%8E%E6%82%A8%E6%89%AB%E4%B8%80%E6%89%AB%E4%B8%8A%E9%9D%A2%E7%9A%84%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%EF%BC%8C%E8%AE%A2%E9%98%85%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%EF%BC%81"><span class="nav-number">48.</span> <span class="nav-text">description: 欢迎您扫一扫上面的微信公众号，订阅我的博客！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2"><span class="nav-number">48.1.</span> <span class="nav-text">创建分类页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2"><span class="nav-number">48.2.</span> <span class="nav-text">创建标签云页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">48.3.</span> <span class="nav-text">注意事项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%8E%E5%8F%91%E5%B8%83"><span class="nav-number">49.</span> <span class="nav-text">四、写博客与发布</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-number">49.1.</span> <span class="nav-text">操作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="nav-number">49.2.</span> <span class="nav-text">注意事项</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">稀饭</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
