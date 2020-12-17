@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stephenzsir.github.io/2020/12/17/2020-12-17/</loc>
+    
+    <lastmod>2020-12-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stephenzsir.github.io/2020/12/16/hello-world/</loc>
     
     <lastmod>2020-12-17</lastmod>
@@ -63,6 +70,13 @@
   
   <url>
     <loc>https://stephenzsir.github.io/categories/%E9%BB%98%E8%AE%A4/</loc>
+    <lastmod>2020-12-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/categories/schedule/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
