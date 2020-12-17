@@ -45,7 +45,7 @@
   
 
   <url>
-    <loc>http://example.com/</loc>
+    <loc>https://stephenzsir.github.io/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -53,7 +53,7 @@
 
   
   <url>
-    <loc>http://example.com/tags/hexo/</loc>
+    <loc>https://stephenzsir.github.io/tags/hexo/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -62,7 +62,7 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E9%BB%98%E8%AE%A4/</loc>
+    <loc>https://stephenzsir.github.io/categories/%E9%BB%98%E8%AE%A4/</loc>
     <lastmod>2020-12-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

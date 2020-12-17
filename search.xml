@@ -17,7 +17,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p>hello <a href="http://example.com/2020/12/16/hello-world/">http://example.com/2020/12/16/hello-world/</a> bye</p>
+<p>本文地址 <a href="https://stephenzsir.github.io/2020/12/16/hello-world/">https://stephenzsir.github.io/2020/12/16/hello-world/</a> 转载请注明出处</p>
 ]]></content>
       <categories>
         <category>默认</category>
