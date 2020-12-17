@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>稀饭の博客</title>
+  
+  <subtitle>记录实际工作中遇到的一些问题及解决方案</subtitle>
+  <link href="https://stephenzsir.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://stephenzsir.github.io/"/>
+  <updated>2020-12-17T08:02:05.050Z</updated>
+  <id>https://stephenzsir.github.io/</id>
+  
+  <author>
+    <name>稀饭</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://stephenzsir.github.io/2020/12/16/hello-world/"/>
+    <id>https://stephenzsir.github.io/2020/12/16/hello-world/</id>
+    <published>2020-12-16T07:02:00.596Z</published>
+    <updated>2020-12-17T08:02:05.050Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="默认" scheme="https://stephenzsir.github.io/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+    
+    <category term="hexo" scheme="https://stephenzsir.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
