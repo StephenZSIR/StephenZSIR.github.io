@@ -6,7 +6,7 @@
   <link href="https://stephenzsir.github.io/atom.xml" rel="self"/>
   
   <link href="https://stephenzsir.github.io/"/>
-  <updated>2020-12-18T07:50:53.192Z</updated>
+  <updated>2020-12-18T10:01:44.852Z</updated>
   <id>https://stephenzsir.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己制作一个hexo插件吧（一）</title>
+    <link href="https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/"/>
+    <id>https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/</id>
+    <published>2020-12-18T08:24:59.000Z</published>
+    <updated>2020-12-18T10:01:44.852Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
+## 自己制作一个hexo插件吧（一）
+### 注册NPM账户
+
+&lt;p&gt;登录官网&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="插件" scheme="https://stephenzsir.github.io/categories/%E6%8F%92%E4%BB%B6/"/>
+    
+    
+    <category term="hexo" scheme="https://stephenzsir.github.io/tags/hexo/"/>
+    
+    <category term="无障碍" scheme="https://stephenzsir.github.io/tags/%E6%97%A0%E9%9A%9C%E7%A2%8D/"/>
+    
+    <category term="插件" scheme="https://stephenzsir.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx负载均衡下客户端真实IP获取</title>

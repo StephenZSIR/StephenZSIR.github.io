@@ -81,29 +81,35 @@ value:%USERPROFILE%</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/12/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>自己制作一个hexo插件吧（一）</title>
+    <url>/2020/12/18/MakeYourHexoPlugin/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+## 自己制作一个hexo插件吧（一）
+### 注册NPM账户
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>登录官网<a href="https://www.npmjs.com/signup">免费注册</a><br>进入注册页需进行防bot验证<br>注册后一定要进行邮箱验证,不然无法进行发布操作</p>
+<h3 id="初始化插件"><a href="#初始化插件" class="headerlink" title="初始化插件"></a>初始化插件</h3><p>新建插件文件夹</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir hexo-your-mod</span><br><span class="line"><span class="built_in">cd</span> hexo-your-mod</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="配置插件信息"><a href="#配置插件信息" class="headerlink" title="配置插件信息"></a>配置插件信息</h3><p>根据提示输入信息:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm init</span><br><span class="line">...</span><br><span class="line">package name: (mytest) hexo-remote-writting</span><br><span class="line">version: (1.0.0) 0.0.1</span><br><span class="line">description: A hexo plugin to support writting post remotely</span><br><span class="line">entry point: (index.js)</span><br><span class="line"><span class="built_in">test</span> <span class="built_in">command</span>:</span><br><span class="line">git repository:</span><br><span class="line">keywords: hexo plugin</span><br><span class="line">author: yourname</span><br><span class="line">license: (ISC) MIT</span><br><span class="line"></span><br><span class="line">Is this OK? (yes)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/16/hello-world/">https://stephenzsir.github.io/2020/12/16/hello-world/</a> </br>转载请注明出处</p>
+<h3 id="登录NPM并上传插件"><a href="#登录NPM并上传插件" class="headerlink" title="登录NPM并上传插件"></a>登录NPM并上传插件</h3><p>登录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm login</span><br><span class="line">$ username: yourname</span><br><span class="line">$ password: yourpass</span><br><span class="line">$ Email: (this IS public) XXXX@126.com</span><br></pre></td></tr></table></figure>
+<p>发布</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm publish</span><br></pre></td></tr></table></figure>
+<p>上传完成后可以测试下是否能正常install</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-your-mod --save</span><br></pre></td></tr></table></figure>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>hexo插件之前也没有接触过，一边学习一边制作，同时把制作过程分享给大家<br>目前想法是把之前做网站时做过的一个无障碍访问模块添加到hexo插件<br>包含网页内容自动朗读和点读，网页字体大小设置，高对比度设置，网页放大缩小，定位点等<br>然后配置项可调整悬浮位置（top，left，right，bottom），调节朗读语速，字号大小<br>新建了个github项目<a href="https://github.com/StephenZSIR/hexo-accessibility-view">地址</a><br>希望或许可以更新下去，不过估计也不会有人看到吧，就当日记用了</p>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/">https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/</a> </br>转载请注明出处</p>
 ]]></content>
       <categories>
-        <category>默认</category>
+        <category>插件</category>
       </categories>
       <tags>
         <tag>hexo</tag>
+        <tag>无障碍</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
@@ -141,6 +147,32 @@ value:%USERPROFILE%</code></pre>
       <tags>
         <tag>Nginx</tag>
         <tag>IP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/16/hello-world/">https://stephenzsir.github.io/2020/12/16/hello-world/</a> </br>转载请注明出处</p>
+]]></content>
+      <categories>
+        <category>默认</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
