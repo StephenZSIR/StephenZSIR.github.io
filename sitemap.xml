@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/</loc>
+    
+    <lastmod>2020-12-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stephenzsir.github.io/2020/12/17/2020-12-17/</loc>
     
     <lastmod>2020-12-18</lastmod>
@@ -70,6 +77,13 @@
   
   <url>
     <loc>https://stephenzsir.github.io/categories/schedule/</loc>
+    <lastmod>2020-12-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2020-12-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

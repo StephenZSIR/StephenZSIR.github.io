@@ -47,6 +47,40 @@
       </categories>
   </entry>
   <entry>
+    <title>部署博客时自动填入Github和Gitee账户密码</title>
+    <url>/2020/12/18/DeployWithoutPassword/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+
+<h2 id="环境变量设置"><a href="#环境变量设置" class="headerlink" title="环境变量设置"></a>环境变量设置</h2><p>在环境变量-系统变量中添加以下变量</p>
+<pre><code>name:HOME
+value:%USERPROFILE%</code></pre>
+<h2 id="添加配置文件"><a href="#添加配置文件" class="headerlink" title="添加配置文件"></a>添加配置文件</h2><p>在以下文件夹内新建文件名为_netrc的配置文件</p>
+<blockquote>
+<p>C:\Users\用户名\</p>
+</blockquote>
+<p>配置文件内容</p>
+<blockquote>
+<p>1 machine github.com<br>2 login 用户名<br>3 password 密码<br>4 machine gitee.com<br>5 login 用户名<br>6 password 密码</p>
+</blockquote>
+<h2 id="hexo配置文件"><a href="#hexo配置文件" class="headerlink" title="hexo配置文件"></a>hexo配置文件</h2><p>博客根目录下_config.yml配置</p>
+<pre><code>deploy:
+    type: git 
+    repository: 
+        github: https://github.com/XXXXX/XXXXX.github.io 
+        gitee: https://gitee.com/XXXXX/XXXXX.git
+    branch: master</code></pre>
+<h2 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/">https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/</a> </br>转载请注明出处</p>
+]]></content>
+      <categories>
+        <category>博客技巧</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/12/16/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>

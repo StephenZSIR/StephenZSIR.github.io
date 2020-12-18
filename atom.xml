@@ -6,7 +6,7 @@
   <link href="https://stephenzsir.github.io/atom.xml" rel="self"/>
   
   <link href="https://stephenzsir.github.io/"/>
-  <updated>2020-12-18T01:33:43.650Z</updated>
+  <updated>2020-12-18T05:41:34.225Z</updated>
   <id>https://stephenzsir.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>部署博客时自动填入Github和Gitee账户密码</title>
+    <link href="https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/"/>
+    <id>https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/</id>
+    <published>2020-12-18T05:22:21.000Z</published>
+    <updated>2020-12-18T05:41:34.225Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
+
+&lt;h2 id=&quot;环境变量设置&quot;&gt;&lt;a href=&quot;#环境变量设置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="博客技巧" scheme="https://stephenzsir.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="hexo" scheme="https://stephenzsir.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>博客插件安装</title>
