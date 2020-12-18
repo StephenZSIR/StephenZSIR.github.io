@@ -84,10 +84,8 @@ value:%USERPROFILE%</code></pre>
     <title>自己制作一个hexo插件吧（一）</title>
     <url>/2020/12/18/MakeYourHexoPlugin/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
-## 自己制作一个hexo插件吧（一）
-### 注册NPM账户
 
-<p>登录官网<a href="https://www.npmjs.com/signup">免费注册</a><br>进入注册页需进行防bot验证<br>注册后一定要进行邮箱验证,不然无法进行发布操作</p>
+<h2 id="自己制作一个hexo插件吧（一）"><a href="#自己制作一个hexo插件吧（一）" class="headerlink" title="自己制作一个hexo插件吧（一）"></a>自己制作一个hexo插件吧（一）</h2><h3 id="注册NPM账户"><a href="#注册NPM账户" class="headerlink" title="注册NPM账户"></a>注册NPM账户</h3><p>登录官网<a href="https://www.npmjs.com/signup">免费注册</a><br>进入注册页需进行防bot验证<br>注册后一定要进行邮箱验证,不然无法进行发布操作</p>
 <h3 id="初始化插件"><a href="#初始化插件" class="headerlink" title="初始化插件"></a>初始化插件</h3><p>新建插件文件夹</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir hexo-your-mod</span><br><span class="line"><span class="built_in">cd</span> hexo-your-mod</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
