@@ -98,7 +98,12 @@ value:%USERPROFILE%</code></pre>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm publish</span><br></pre></td></tr></table></figure>
 <p>上传完成后可以测试下是否能正常install</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-your-mod --save</span><br></pre></td></tr></table></figure>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>hexo插件之前也没有接触过，一边学习一边制作，同时把制作过程分享给大家<br>目前想法是把之前做网站时做过的一个无障碍访问模块添加到hexo插件<br>包含网页内容自动朗读和点读，网页字体大小设置，高对比度设置，网页放大缩小，定位点等<br>然后配置项可调整悬浮位置（top，left，right，bottom），调节朗读语速，字号大小<br>新建了个github项目<a href="https://github.com/StephenZSIR/hexo-accessibility-view">地址</a><br>希望或许可以更新下去，不过估计也不会有人看到吧，就当日记用了</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>hexo插件之前也没有接触过，一边学习一边制作，同时把制作过程分享给大家<br>目前想法是把之前做网站时做过的一个无障碍访问模块添加到hexo插件<br>包含网页内容自动朗读和点读，网页字体大小设置，高对比度设置，网页放大缩小，定位点等<br>然后配置项可调整悬浮位置（top，left，right，bottom），调节朗读语速，字号大小</p>
+<p>开关</p>
+<p><img src="https://stephenzsir.github.io/images/open_button.png" alt="Image text"></p>
+<p>工具栏</p>
+<p><img src="https://stephenzsir.github.io/images/toolbar.png" alt="Image text"></p>
+<p>新建了个github项目<a href="https://github.com/StephenZSIR/hexo-accessibility-view">地址</a><br>希望或许可以更新下去，不过估计也不会有人看到吧，就当日记用了</p>
 <p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/">https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/</a> </br>转载请注明出处</p>
 ]]></content>
       <categories>
