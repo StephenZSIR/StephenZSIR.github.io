@@ -106,4 +106,41 @@ value:%USERPROFILE%</code></pre>
         <tag>hexo</tag>
       </tags>
   </entry>
+  <entry>
+    <title>20201218151903</title>
+    <url>/2020/12/18/Nginx-IP/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+
+<p>服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白</p>
+<h2 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h2><p>查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数值的，起初以为是被攻击，通过日志发现访问记录并不多，并且IP都为同一个。<br>详细查看框架自带的IpFilter类，发现获取IP所用方法为</p>
+<blockquote>
+<p>String ip = request.getRemoteHost();</p>
+</blockquote>
+<p>问题找到了:joy:</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>IpFilter类原本获取IP的方法获取的IP在没部署Nginx负载均衡时是正确的，但是加了Nginx后，因为所有请求都经Nginx转发，获取的IP就从客户端IP变成了Nginx服务器IP，所以需对IP获取方式进行调整。</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>确认Nginx的配置文件nginx.conf中是否包含包含以下配置</p>
+<blockquote>
+<p>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</p>
+</blockquote>
+<p>如果没有需要添加，此处是将客户端的真实IP写入请求header的X-Forwarded-For中<br>并将获取IP的方式改为：</p>
+<blockquote>
+<p>String ip = request.getHeader(“X-Forwarded-For”);</p>
+</blockquote>
+<p>为兼容没有部署Nginx的情况，还需添加以下内容:</p>
+<blockquote>
+<pre><code>   if(!StringUtils.isNotBlank(ip))&#123;
+       ip = request.getRemoteHost();
+   &#125;</code></pre>
+</blockquote>
+<h2 id="总结教训"><a href="#总结教训" class="headerlink" title="总结教训"></a>总结教训</h2><p>很多时候，在公司现有的框架上进行开发时，更多的是注重功能的实现，对于框架自带的一些东西并没有进行深入的了解，导致在框架基础上新增了东西时，和框架原本内容有冲突还不知道，等到真到出现了问题才会发现。</p>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/Nginx-IP/">https://stephenzsir.github.io/2020/12/18/Nginx-IP/</a> </br>转载请注明出处</p>
+]]></content>
+      <categories>
+        <category>系统故障</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+        <tag>IP</tag>
+      </tags>
+  </entry>
 </search>

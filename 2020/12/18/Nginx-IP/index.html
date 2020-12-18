@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Nginx,IP," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白 问题排查查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数值的，起初以为是被攻击，通过日志发现访问记录并不多，并且IP都为同一个。详细查看框架自带的IpFilt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://stephenzsir.github.io/2020/12/16/hello-world/index.html">
+<meta property="og:title" content="20201218151903">
+<meta property="og:url" content="https://stephenzsir.github.io/2020/12/18/Nginx-IP/index.html">
 <meta property="og:site_name" content="稀饭の博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白 问题排查查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数值的，起初以为是被攻击，通过日志发现访问记录并不多，并且IP都为同一个。详细查看框架自带的IpFilt">
 <meta property="og:locale">
-<meta property="article:published_time" content="2020-12-16T07:02:00.596Z">
-<meta property="article:modified_time" content="2020-12-17T08:02:05.050Z">
+<meta property="article:published_time" content="2020-12-18T07:19:03.000Z">
+<meta property="article:modified_time" content="2020-12-18T07:48:57.138Z">
 <meta property="article:author" content="稀饭">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="IP">
 <meta name="twitter:card" content="summary">
 
 
@@ -122,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://stephenzsir.github.io/2020/12/16/hello-world/"/>
+  <link rel="canonical" href="https://stephenzsir.github.io/2020/12/18/Nginx-IP/"/>
 
 
 
 
 
-  <title>Hello World | 稀饭の博客</title>
+  <title>20201218151903 | 稀饭の博客</title>
   
 
 
@@ -319,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://stephenzsir.github.io/2020/12/16/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://stephenzsir.github.io/2020/12/18/Nginx-IP/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -336,7 +337,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">20201218151903</h1>
         
 
         <div class="post-meta">
@@ -348,8 +349,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-16T15:02:00+08:00">
-                2020-12-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-18T15:19:03+08:00">
+                2020-12-18
               </time>
             
 
@@ -371,8 +372,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%BB%98%E8%AE%A4/" itemprop="url" rel="index">
-                    <span itemprop="name">默认</span>
+                  <a href="/categories/%E7%B3%BB%E7%BB%9F%E6%95%85%E9%9A%9C/" itemprop="url" rel="index">
+                    <span itemprop="name">系统故障</span>
                   </a>
                 </span>
 
@@ -389,8 +390,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/12/16/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2020/12/16/hello-world/" itemprop="commentCount"></span>
+                <a href="/2020/12/18/Nginx-IP/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/12/18/Nginx-IP/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -412,7 +413,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  106字
+                  456字
                 </span>
               
 
@@ -449,21 +450,31 @@
       
 
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <meta name="referrer" content="no-referrer" />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/16/hello-world/">https://stephenzsir.github.io/2020/12/16/hello-world/</a> </br>转载请注明出处</p>
+<p>服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白</p>
+<h2 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h2><p>查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数值的，起初以为是被攻击，通过日志发现访问记录并不多，并且IP都为同一个。<br>详细查看框架自带的IpFilter类，发现获取IP所用方法为</p>
+<blockquote>
+<p>String ip = request.getRemoteHost();</p>
+</blockquote>
+<p>问题找到了:joy:</p>
+<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>IpFilter类原本获取IP的方法获取的IP在没部署Nginx负载均衡时是正确的，但是加了Nginx后，因为所有请求都经Nginx转发，获取的IP就从客户端IP变成了Nginx服务器IP，所以需对IP获取方式进行调整。</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>确认Nginx的配置文件nginx.conf中是否包含包含以下配置</p>
+<blockquote>
+<p>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</p>
+</blockquote>
+<p>如果没有需要添加，此处是将客户端的真实IP写入请求header的X-Forwarded-For中<br>并将获取IP的方式改为：</p>
+<blockquote>
+<p>String ip = request.getHeader(“X-Forwarded-For”);</p>
+</blockquote>
+<p>为兼容没有部署Nginx的情况，还需添加以下内容:</p>
+<blockquote>
+<pre><code>   if(!StringUtils.isNotBlank(ip))&#123;
+       ip = request.getRemoteHost();
+   &#125;</code></pre>
+</blockquote>
+<h2 id="总结教训"><a href="#总结教训" class="headerlink" title="总结教训"></a>总结教训</h2><p>很多时候，在公司现有的框架上进行开发时，更多的是注重功能的实现，对于框架自带的一些东西并没有进行深入的了解，导致在框架基础上新增了东西时，和框架原本内容有冲突还不知道，等到真到出现了问题才会发现。</p>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/Nginx-IP/">https://stephenzsir.github.io/2020/12/18/Nginx-IP/</a> </br>转载请注明出处</p>
 
       
     </div>
@@ -510,7 +521,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+            <a href="/tags/Nginx/" rel="tag"><i class="fa fa-tag"></i> Nginx</a>
+          
+            <a href="/tags/IP/" rel="tag"><i class="fa fa-tag"></i> IP</a>
           
         </div>
       
@@ -523,15 +536,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2020/12/18/DeployWithoutPassword/" rel="next" title="部署博客时自动填入Github和Gitee账户密码">
+                <i class="fa fa-chevron-left"></i> 部署博客时自动填入Github和Gitee账户密码
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/12/17/2020-12-17/" rel="prev" title="博客插件安装">
-                博客插件安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -723,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5"><span class="nav-number">1.</span> <span class="nav-text">问题排查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0"><span class="nav-number">2.</span> <span class="nav-text">问题原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="nav-number">3.</span> <span class="nav-text">问题解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E6%95%99%E8%AE%AD"><span class="nav-number">4.</span> <span class="nav-text">总结教训</span></a></li></ol></div>
             
 
           </div>

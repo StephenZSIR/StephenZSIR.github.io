@@ -6,7 +6,7 @@
   <link href="https://stephenzsir.github.io/atom.xml" rel="self"/>
   
   <link href="https://stephenzsir.github.io/"/>
-  <updated>2020-12-18T05:41:34.225Z</updated>
+  <updated>2020-12-18T07:48:57.138Z</updated>
   <id>https://stephenzsir.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>20201218151903</title>
+    <link href="https://stephenzsir.github.io/2020/12/18/Nginx-IP/"/>
+    <id>https://stephenzsir.github.io/2020/12/18/Nginx-IP/</id>
+    <published>2020-12-18T07:19:03.000Z</published>
+    <updated>2020-12-18T07:48:57.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
+
+&lt;p&gt;服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白&lt;/p&gt;
+&lt;h2 id=&quot;问题排查&quot;&gt;&lt;a href=&quot;#问题排查&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="系统故障" scheme="https://stephenzsir.github.io/categories/%E7%B3%BB%E7%BB%9F%E6%95%85%E9%9A%9C/"/>
+    
+    
+    <category term="Nginx" scheme="https://stephenzsir.github.io/tags/Nginx/"/>
+    
+    <category term="IP" scheme="https://stephenzsir.github.io/tags/IP/"/>
+    
+  </entry>
   
   <entry>
     <title>部署博客时自动填入Github和Gitee账户密码</title>
