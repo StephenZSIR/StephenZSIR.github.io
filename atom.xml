@@ -6,7 +6,7 @@
   <link href="https://stephenzsir.github.io/atom.xml" rel="self"/>
   
   <link href="https://stephenzsir.github.io/"/>
-  <updated>2020-12-21T09:19:44.213Z</updated>
+  <updated>2020-12-21T09:56:02.365Z</updated>
   <id>https://stephenzsir.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己制作一个hexo插件吧（二）</title>
+    <link href="https://stephenzsir.github.io/2020/12/21/MakeYourHexoPlugin2/"/>
+    <id>https://stephenzsir.github.io/2020/12/21/MakeYourHexoPlugin2/</id>
+    <published>2020-12-21T10:24:59.000Z</published>
+    <updated>2020-12-21T09:56:02.365Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
+&lt;h2 id=&quot;自己制作一个hexo插件吧（二）&quot;&gt;&lt;a class=&quot;header-anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="插件" scheme="https://stephenzsir.github.io/categories/%E6%8F%92%E4%BB%B6/"/>
+    
+    
+    <category term="hexo" scheme="https://stephenzsir.github.io/tags/hexo/"/>
+    
+    <category term="插件" scheme="https://stephenzsir.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>自己制作一个hexo插件吧（一）</title>
