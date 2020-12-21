@@ -186,9 +186,9 @@
 		    			'class': pluginName
 		    		}).appendTo('body');
 
-	    		for(var i in options.ad){
+	    		
 
-	    			var ad = options.ad[i];
+	    			var ad = options.ad;
 	    			ad = $.extend({}, ads, ad);
 	    			//漂浮层
 	    			var div = $('<div>', {
@@ -242,7 +242,7 @@
 	    			content.appendTo(div);
 
 	    			div.appendTo(adDiv);
-	    		}
+	    		
 	    		delete options.ad;
 	    		$('#' + pluginName).floatingAd(options);
 	    	}
