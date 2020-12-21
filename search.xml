@@ -4,42 +4,36 @@
     <title>博客插件安装</title>
     <url>/2020/12/17/2020-12-17/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
-
-<h2 id="今日博客插件安装"><a href="#今日博客插件安装" class="headerlink" title="今日博客插件安装"></a>今日博客插件安装</h2><h3 id="hexo-generator-feed-RSS订阅"><a href="#hexo-generator-feed-RSS订阅" class="headerlink" title="hexo-generator-feed RSS订阅"></a>hexo-generator-feed RSS订阅</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
+<h2 id="今日博客插件安装"><a class="header-anchor" href="#今日博客插件安装">¶</a>今日博客插件安装</h2>
+<h3 id="hexo-generator-feed-RSS订阅"><a class="header-anchor" href="#hexo-generator-feed-RSS订阅">¶</a>hexo-generator-feed RSS订阅</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
 <p>根目录_config.yml配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: <span class="string">&#x27; &#x27;</span></span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-
-<h3 id="hexo-generator-sitemap-站点地图"><a href="#hexo-generator-sitemap-站点地图" class="headerlink" title="hexo-generator-sitemap 站点地图"></a>hexo-generator-sitemap 站点地图</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br><span class="line">$ npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-
+<h3 id="hexo-generator-sitemap-站点地图"><a class="header-anchor" href="#hexo-generator-sitemap-站点地图">¶</a>hexo-generator-sitemap 站点地图</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br><span class="line">$ npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
 <p>根目录_config.yml配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-
-<h3 id="hexo-generator-searchdb-网站搜索"><a href="#hexo-generator-searchdb-网站搜索" class="headerlink" title="hexo-generator-searchdb 网站搜索"></a>hexo-generator-searchdb 网站搜索</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
+<h3 id="hexo-generator-searchdb-网站搜索"><a class="header-anchor" href="#hexo-generator-searchdb-网站搜索">¶</a>hexo-generator-searchdb 网站搜索</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
 <p>根目录_config.yml配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-
-<h3 id="hexo-helper-live2d-虚拟动漫人物"><a href="#hexo-helper-live2d-虚拟动漫人物" class="headerlink" title="hexo-helper-live2d 虚拟动漫人物"></a>hexo-helper-live2d 虚拟动漫人物</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-helper-live2d --save</span><br></pre></td></tr></table></figure>
-
+<h3 id="hexo-helper-live2d-虚拟动漫人物"><a class="header-anchor" href="#hexo-helper-live2d-虚拟动漫人物">¶</a>hexo-helper-live2d 虚拟动漫人物</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-helper-live2d --save</span><br></pre></td></tr></table></figure>
 <p>NEXT主题目录_config.yml配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span></span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  <span class="built_in">log</span>: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 100</span><br><span class="line">    height: 200</span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
-
-<h3 id="hexo-wordcount-文章字数阅读时间统计"><a href="#hexo-wordcount-文章字数阅读时间统计" class="headerlink" title="hexo-wordcount 文章字数阅读时间统计"></a>hexo-wordcount 文章字数阅读时间统计</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
-
+<h3 id="hexo-wordcount-文章字数阅读时间统计"><a class="header-anchor" href="#hexo-wordcount-文章字数阅读时间统计">¶</a>hexo-wordcount 文章字数阅读时间统计</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
 <p>根目录_config.yml配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: <span class="literal">true</span>                <span class="comment"># 文章字数统计</span></span><br><span class="line">  time: <span class="literal">true</span>                   <span class="comment"># 文章阅读时长</span></span><br><span class="line">  total_symbols: <span class="literal">true</span>          <span class="comment"># 站点总字数统计</span></span><br><span class="line">  total_time: <span class="literal">true</span>             <span class="comment"># 站点总阅读时长</span></span><br><span class="line">  exclude_codeblock: <span class="literal">false</span>     <span class="comment"># 排除代码字数统计</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="valine-评论系统"><a href="#valine-评论系统" class="headerlink" title="valine 评论系统"></a>valine 评论系统</h3><p>开启Valine<br>注册Leancloud<br>我们的评论系统其实是放在Leancloud上的，因此首先需要去注册一个账号</p>
+<h3 id="valine-评论系统"><a class="header-anchor" href="#valine-评论系统">¶</a>valine 评论系统</h3>
+<p>开启Valine<br>
+注册Leancloud<br>
+我们的评论系统其实是放在Leancloud上的，因此首先需要去注册一个账号</p>
 <p>Leancloud官网<a href="https://leancloud.cn/">点我注册</a></p>
 <p>注册完以后需要创建一个应用，名字可以随便起，然后 进入应用-&gt;设置-&gt;应用key</p>
-<p>获取你的appid 和 appkey </p>
+<p>获取你的appid 和 appkey</p>
 <p>根目录_config.yml配置</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  appid:  <span class="comment"># your leancloud application appid</span></span><br><span class="line">  appkey:  <span class="comment"># your leancloud application appkey</span></span><br><span class="line">  notify: <span class="literal">true</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line">  verify: <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line">  placeholder: 说点什么吧！ <span class="comment"># comment box placeholder</span></span><br><span class="line">  avatar: mp <span class="comment"># gravatar style</span></span><br><span class="line">  guest_info: nick,mail,link <span class="comment"># custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># pagination size</span></span><br></pre></td></tr></table></figure>
-
-
-
-
 <p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/17/2020-12-17/">https://stephenzsir.github.io/2020/12/17/2020-12-17/</a> </br>转载请注明出处</p>
 ]]></content>
       <categories>
@@ -50,27 +44,36 @@
     <title>部署博客时自动填入Github和Gitee账户密码</title>
     <url>/2020/12/18/DeployWithoutPassword/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
-
-<h2 id="环境变量设置"><a href="#环境变量设置" class="headerlink" title="环境变量设置"></a>环境变量设置</h2><p>在环境变量-系统变量中添加以下变量</p>
+<h2 id="环境变量设置"><a class="header-anchor" href="#环境变量设置">¶</a>环境变量设置</h2>
+<p>在环境变量-系统变量中添加以下变量</p>
 <pre><code>name:HOME
-value:%USERPROFILE%</code></pre>
-<h2 id="添加配置文件"><a href="#添加配置文件" class="headerlink" title="添加配置文件"></a>添加配置文件</h2><p>在以下文件夹内新建文件名为_netrc的配置文件</p>
+value:%USERPROFILE%
+</code></pre>
+<h2 id="添加配置文件"><a class="header-anchor" href="#添加配置文件">¶</a>添加配置文件</h2>
+<p>在以下文件夹内新建文件名为_netrc的配置文件</p>
 <blockquote>
 <p>C:\Users\用户名\</p>
 </blockquote>
 <p>配置文件内容</p>
 <blockquote>
-<p>1 machine github.com<br>2 login 用户名<br>3 password 密码<br>4 machine gitee.com<br>5 login 用户名<br>6 password 密码</p>
+<p>1 machine <a href="http://github.com">github.com</a><br>
+2 login 用户名<br>
+3 password 密码<br>
+4 machine <a href="http://gitee.com">gitee.com</a><br>
+5 login 用户名<br>
+6 password 密码</p>
 </blockquote>
-<h2 id="hexo配置文件"><a href="#hexo配置文件" class="headerlink" title="hexo配置文件"></a>hexo配置文件</h2><p>博客根目录下_config.yml配置</p>
+<h2 id="hexo配置文件"><a class="header-anchor" href="#hexo配置文件">¶</a>hexo配置文件</h2>
+<p>博客根目录下_config.yml配置</p>
 <pre><code>deploy:
     type: git 
     repository: 
-        github: https://github.com/XXXXX/XXXXX.github.io 
-        gitee: https://gitee.com/XXXXX/XXXXX.git
-    branch: master</code></pre>
-<h2 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
+	    github: https://github.com/XXXXX/XXXXX.github.io 
+	    gitee: https://gitee.com/XXXXX/XXXXX.git
+    branch: master
+</code></pre>
+<h2 id="部署博客"><a class="header-anchor" href="#部署博客">¶</a>部署博客</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 <p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/">https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/</a> </br>转载请注明出处</p>
 ]]></content>
       <categories>
@@ -84,26 +87,35 @@ value:%USERPROFILE%</code></pre>
     <title>自己制作一个hexo插件吧（一）</title>
     <url>/2020/12/18/MakeYourHexoPlugin/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
-
-<h2 id="自己制作一个hexo插件吧（一）"><a href="#自己制作一个hexo插件吧（一）" class="headerlink" title="自己制作一个hexo插件吧（一）"></a>自己制作一个hexo插件吧（一）</h2><h3 id="注册NPM账户"><a href="#注册NPM账户" class="headerlink" title="注册NPM账户"></a>注册NPM账户</h3><p>登录官网<a href="https://www.npmjs.com/signup">免费注册</a><br>进入注册页需进行防bot验证<br>注册后一定要进行邮箱验证,不然无法进行发布操作</p>
-<h3 id="初始化插件"><a href="#初始化插件" class="headerlink" title="初始化插件"></a>初始化插件</h3><p>新建插件文件夹</p>
+<h2 id="自己制作一个hexo插件吧（一）"><a class="header-anchor" href="#自己制作一个hexo插件吧（一）">¶</a>自己制作一个hexo插件吧（一）</h2>
+<h3 id="注册NPM账户"><a class="header-anchor" href="#注册NPM账户">¶</a>注册NPM账户</h3>
+<p>登录官网<a href="https://www.npmjs.com/signup">免费注册</a><br>
+进入注册页需进行防bot验证<br>
+注册后一定要进行邮箱验证,不然无法进行发布操作</p>
+<h3 id="初始化插件"><a class="header-anchor" href="#初始化插件">¶</a>初始化插件</h3>
+<p>新建插件文件夹</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir hexo-your-mod</span><br><span class="line"><span class="built_in">cd</span> hexo-your-mod</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置插件信息"><a href="#配置插件信息" class="headerlink" title="配置插件信息"></a>配置插件信息</h3><p>根据提示输入信息:</p>
+<h3 id="配置插件信息"><a class="header-anchor" href="#配置插件信息">¶</a>配置插件信息</h3>
+<p>根据提示输入信息:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm init</span><br><span class="line">...</span><br><span class="line">package name: (mytest) hexo-remote-writting</span><br><span class="line">version: (1.0.0) 0.0.1</span><br><span class="line">description: A hexo plugin to support writting post remotely</span><br><span class="line">entry point: (index.js)</span><br><span class="line"><span class="built_in">test</span> <span class="built_in">command</span>:</span><br><span class="line">git repository:</span><br><span class="line">keywords: hexo plugin</span><br><span class="line">author: yourname</span><br><span class="line">license: (ISC) MIT</span><br><span class="line"></span><br><span class="line">Is this OK? (yes)</span><br></pre></td></tr></table></figure>
-
-<h3 id="登录NPM并上传插件"><a href="#登录NPM并上传插件" class="headerlink" title="登录NPM并上传插件"></a>登录NPM并上传插件</h3><p>登录</p>
+<h3 id="登录NPM并上传插件"><a class="header-anchor" href="#登录NPM并上传插件">¶</a>登录NPM并上传插件</h3>
+<p>登录</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm login</span><br><span class="line">$ username: yourname</span><br><span class="line">$ password: yourpass</span><br><span class="line">$ Email: (this IS public) XXXX@126.com</span><br></pre></td></tr></table></figure>
 <p>发布</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm publish</span><br></pre></td></tr></table></figure>
 <p>上传完成后可以测试下是否能正常install</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-your-mod --save</span><br></pre></td></tr></table></figure>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>hexo插件之前也没有接触过，一边学习一边制作，同时把制作过程分享给大家<br>目前想法是把之前做网站时做过的一个无障碍访问模块添加到hexo插件<br>包含网页内容自动朗读和点读，网页字体大小设置，高对比度设置，网页放大缩小，定位点等<br>然后配置项可调整悬浮位置（top，left，right，bottom），调节朗读语速，字号大小</p>
+<h3 id="结语"><a class="header-anchor" href="#结语">¶</a>结语</h3>
+<p>hexo插件之前也没有接触过，一边学习一边制作，同时把制作过程分享给大家<br>
+目前想法是把之前做网站时做过的一个无障碍访问模块添加到hexo插件<br>
+包含网页内容自动朗读和点读，网页字体大小设置，高对比度设置，网页放大缩小，定位点等<br>
+然后配置项可调整悬浮位置（top，left，right，bottom），调节朗读语速，字号大小</p>
 <p>开关</p>
 <p><img src="https://stephenzsir.github.io/images/open_button.png" alt="Image text"></p>
 <p>工具栏</p>
 <p><img src="https://stephenzsir.github.io/images/toolbar.png" alt="Image text"></p>
-<p>新建了个github项目<a href="https://github.com/StephenZSIR/hexo-accessibility-view">地址</a><br>希望或许可以更新下去，不过估计也不会有人看到吧，就当日记用了</p>
+<p>新建了个github项目<a href="https://github.com/StephenZSIR/hexo-accessibility-view">地址</a><br>
+希望或许可以更新下去，不过估计也不会有人看到吧，就当日记用了</p>
 <p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/">https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/</a> </br>转载请注明出处</p>
 ]]></content>
       <categories>
@@ -119,19 +131,23 @@ value:%USERPROFILE%</code></pre>
     <title>Nginx负载均衡下客户端真实IP获取</title>
     <url>/2020/12/18/Nginx-IP/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
-
 <p>服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白</p>
-<h2 id="问题排查"><a href="#问题排查" class="headerlink" title="问题排查"></a>问题排查</h2><p>查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数值的，起初以为是被攻击，通过日志发现访问记录并不多，并且IP都为同一个。<br>详细查看框架自带的IpFilter类，发现获取IP所用方法为</p>
+<h2 id="问题排查"><a class="header-anchor" href="#问题排查">¶</a>问题排查</h2>
+<p>查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数值的，起初以为是被攻击，通过日志发现访问记录并不多，并且IP都为同一个。<br>
+详细查看框架自带的IpFilter类，发现获取IP所用方法为</p>
 <blockquote>
 <p>String ip = request.getRemoteHost();</p>
 </blockquote>
-<p>问题找到了:joy:</p>
-<h2 id="问题原因"><a href="#问题原因" class="headerlink" title="问题原因"></a>问题原因</h2><p>IpFilter类原本获取IP的方法获取的IP在没部署Nginx负载均衡时是正确的，但是加了Nginx后，因为所有请求都经Nginx转发，获取的IP就从客户端IP变成了Nginx服务器IP，所以需对IP获取方式进行调整。</p>
-<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>确认Nginx的配置文件nginx.conf中是否包含包含以下配置</p>
+<p>问题找到了😂</p>
+<h2 id="问题原因"><a class="header-anchor" href="#问题原因">¶</a>问题原因</h2>
+<p>IpFilter类原本获取IP的方法获取的IP在没部署Nginx负载均衡时是正确的，但是加了Nginx后，因为所有请求都经Nginx转发，获取的IP就从客户端IP变成了Nginx服务器IP，所以需对IP获取方式进行调整。</p>
+<h2 id="问题解决"><a class="header-anchor" href="#问题解决">¶</a>问题解决</h2>
+<p>确认Nginx的配置文件nginx.conf中是否包含包含以下配置</p>
 <blockquote>
 <p>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</p>
 </blockquote>
-<p>如果没有需要添加，此处是将客户端的真实IP写入请求header的X-Forwarded-For中<br>并将获取IP的方式改为：</p>
+<p>如果没有需要添加，此处是将客户端的真实IP写入请求header的X-Forwarded-For中<br>
+并将获取IP的方式改为：</p>
 <blockquote>
 <p>String ip = request.getHeader(“X-Forwarded-For”);</p>
 </blockquote>
@@ -139,9 +155,11 @@ value:%USERPROFILE%</code></pre>
 <blockquote>
 <pre><code>   if(!StringUtils.isNotBlank(ip))&#123;
        ip = request.getRemoteHost();
-   &#125;</code></pre>
+   &#125;
+</code></pre>
 </blockquote>
-<h2 id="总结教训"><a href="#总结教训" class="headerlink" title="总结教训"></a>总结教训</h2><p>很多时候，在公司现有的框架上进行开发时，更多的是注重功能的实现，对于框架自带的一些东西并没有进行深入的了解，导致在框架基础上新增了东西时，和框架原本内容有冲突还不知道，等到真到出现了问题才会发现。</p>
+<h2 id="总结教训"><a class="header-anchor" href="#总结教训">¶</a>总结教训</h2>
+<p>很多时候，在公司现有的框架上进行开发时，更多的是注重功能的实现，对于框架自带的一些东西并没有进行深入的了解，导致在框架基础上新增了东西时，和框架原本内容有冲突还不知道，等到真到出现了问题才会发现。</p>
 <p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/Nginx-IP/">https://stephenzsir.github.io/2020/12/18/Nginx-IP/</a> </br>转载请注明出处</p>
 ]]></content>
       <categories>
@@ -156,18 +174,19 @@ value:%USERPROFILE%</code></pre>
     <title>Hello World</title>
     <url>/2020/12/16/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="Quick-Start"><a class="header-anchor" href="#Quick-Start">¶</a>Quick Start</h2>
+<h3 id="Create-a-new-post"><a class="header-anchor" href="#Create-a-new-post">¶</a>Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="Run-server"><a class="header-anchor" href="#Run-server">¶</a>Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="Generate-static-files"><a class="header-anchor" href="#Generate-static-files">¶</a>Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a class="header-anchor" href="#Deploy-to-remote-sites">¶</a>Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 <p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/16/hello-world/">https://stephenzsir.github.io/2020/12/16/hello-world/</a> </br>转载请注明出处</p>
 ]]></content>

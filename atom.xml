@@ -29,8 +29,7 @@
         
         
     <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
-
-&lt;h2 id=&quot;自己制作一个hexo插件吧（一）&quot;&gt;&lt;a href=&quot;#自己制作一个hexo插件吧（一）&quot; class=&quot;headerlink&quot;</summary>
+&lt;h2 id=&quot;自己制作一个hexo插件吧（一）&quot;&gt;&lt;a class=&quot;header-anchor&quot;</summary>
         
       
     
@@ -60,9 +59,8 @@
         
         
     <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
-
 &lt;p&gt;服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白&lt;/p&gt;
-&lt;h2 id=&quot;问题排查&quot;&gt;&lt;a href=&quot;#问题排查&quot;</summary>
+&lt;h2 id=&quot;问题排查&quot;&gt;&lt;a class=&quot;header-anchor&quot;</summary>
         
       
     
@@ -90,8 +88,7 @@
         
         
     <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
-
-&lt;h2 id=&quot;环境变量设置&quot;&gt;&lt;a href=&quot;#环境变量设置&quot; class=&quot;headerlink&quot;</summary>
+&lt;h2 id=&quot;环境变量设置&quot;&gt;&lt;a class=&quot;header-anchor&quot;</summary>
         
       
     
@@ -117,8 +114,8 @@
         
         
     <summary type="html">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;
-
-&lt;h2 id=&quot;今日博客插件安装&quot;&gt;&lt;a href=&quot;#今日博客插件安装&quot; class=&quot;headerlink&quot;</summary>
+&lt;h2 id=&quot;今日博客插件安装&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#今日博客插件安装&quot;&gt;¶&lt;/a&gt;今日博客插件安装&lt;/h2&gt;
+&lt;h3</summary>
         
       
     

@@ -1,0 +1,78 @@
+.fixedAd {
+	position: fixed;
+	right: 12px;
+	top: 250px;
+	z-index: 2000;
+}
+
+.fixedAd .closeBtn {
+	display: block;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	background: #fff;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+}
+
+.floating {
+	z-index: 999999;
+}
+
+.floating .a_focus {
+	z-index: 999999;
+	background: none;
+	position: absolute;
+	display: none;
+	box-shadow: 0 0 5px #000;
+}
+.floating a {
+	color: #000000;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.floating a img {
+	border: 0;
+	width: 110px;
+	height: 170px;
+}
+
+.floating .close {
+	display: none;
+}
+
+.floating .opacity {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 25px;
+	opacity: 0.20;
+	filter: alpha(opacity = 20);
+}
+
+.opacity1 {
+	opacity: 0.90;
+	filter: alpha(opacity = 90);
+}
+
+.floating .text {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 25px;
+	color: #000000;
+	line-height: 25px;
+}
+
+.floating .text .button {
+	position: relative;
+	float: right;
+	top: 6px;
+	right: 1px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}

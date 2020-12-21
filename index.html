@@ -6,7 +6,9 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="https://stephenzsir.github.io/style/windowflow/floatingPic.css">
+<!-- hexo injector head_begin end -->
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -136,7 +138,11 @@
 
 
 
-<meta name="generator" content="Hexo 5.2.0"></head>
+<!-- hexo injector head_end start -->
+<script src="https://stephenzsir.github.io/script/windowflow/jquery.js"></script>
+
+<script src="https://stephenzsir.github.io/script/windowflow/floatingPic.js"></script>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -413,7 +419,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  369字
+                  370字
                 </span>
               
 
@@ -453,13 +459,16 @@
         
           
           
-
-自己制作一个hexo插件吧（一）注册NPM账户登录官网免费注册进入注册页需进行防bot验证注册后一定要进行邮箱验证,不然无法进行发布操作
-初始化插件新建插件文件夹
+¶自己制作一个hexo插件吧（一）
+¶注册NPM账户
+登录官网免费注册
+进入注册页需进行防bot验证
+注册后一定要进行邮箱验证,不然无法进行发布操作
+¶初始化插件
+新建插件文件夹
 123mkdir hexo-your-modcd hexo-your-modnpm init
-
-配置插件信息根据提示输入信息:
-12
+¶配置插件信息
+根据提示
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -649,9 +658,9 @@
         
           
           
-
 服务器部署Nginx负载均衡后，某日，发现系统无法访问，系统首页一片空白
-问题排查查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数值
+¶问题排查
+查看tomcat日志，发现Nginx服务器IP被系统中自带的IpFilter类拦截掉了，IpFilter类的过滤设置是某IP端一秒钟内访问超过50次，会被禁止访问一小时，按照现有情况正常访问的话是不可能超过这个数
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -801,7 +810,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  155字
+                  158字
                 </span>
               
 
@@ -841,17 +850,21 @@
         
           
           
-
-环境变量设置在环境变量-系统变量中添加以下变量
+¶环境变量设置
+在环境变量-系统变量中添加以下变量
 name:HOME
 value:%USERPROFILE%
-添加配置文件在以下文件夹内新建文件名为_netrc的配置文件
+
+¶添加配置文件
+在以下文件夹内新建文件名为_netrc的配置文件
 
 C:\Users\用户名\
 
 配置文件内容
 
-1 machine github.com2 login 用户名3 passwo
+1 machine github.com
+2 login 用户名
+3 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1001,7 +1014,7 @@ C:\Users\用户名\
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  402字
+                  405字
                 </span>
               
 
@@ -1041,11 +1054,11 @@ C:\Users\用户名\
         
           
           
-
-今日博客插件安装hexo-generator-feed RSS订阅1$ npm install hexo-generator-feed --save
-
+¶今日博客插件安装
+¶hexo-generator-feed RSS订阅
+1$ npm install hexo-generator-feed --save
 根目录_config.yml配置
-123456789feed:  type: atom  path: atom.xml  limit: 20  
+123456789feed:  type: atom  path: atom.xml  limit: 20
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1195,7 +1208,7 @@ C:\Users\用户名\
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  106字
+                  111字
                 </span>
               
 

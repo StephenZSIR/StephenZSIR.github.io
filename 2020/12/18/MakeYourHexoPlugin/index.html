@@ -6,7 +6,9 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
+<head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="https://stephenzsir.github.io/style/windowflow/floatingPic.css">
+<!-- hexo injector head_begin end -->
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -81,12 +83,12 @@
 
 
 
-<meta name="description" content="自己制作一个hexo插件吧（一）注册NPM账户登录官网免费注册进入注册页需进行防bot验证注册后一定要进行邮箱验证,不然无法进行发布操作 初始化插件新建插件文件夹 123mkdir hexo-your-modcd hexo-your-modnpm init  配置插件信息根据提示输入信息: 12345678910111213$ npm init...package name: (mytest)">
+<meta name="description" content="¶自己制作一个hexo插件吧（一） ¶注册NPM账户 登录官网免费注册 进入注册页需进行防bot验证 注册后一定要进行邮箱验证,不然无法进行发布操作 ¶初始化插件 新建插件文件夹 123mkdir hexo-your-modcd hexo-your-modnpm init ¶配置插件信息 根据提示输入信息: 12345678910111213$ npm init...package name:">
 <meta property="og:type" content="article">
 <meta property="og:title" content="自己制作一个hexo插件吧（一）">
 <meta property="og:url" content="https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/index.html">
 <meta property="og:site_name" content="稀饭の博客">
-<meta property="og:description" content="自己制作一个hexo插件吧（一）注册NPM账户登录官网免费注册进入注册页需进行防bot验证注册后一定要进行邮箱验证,不然无法进行发布操作 初始化插件新建插件文件夹 123mkdir hexo-your-modcd hexo-your-modnpm init  配置插件信息根据提示输入信息: 12345678910111213$ npm init...package name: (mytest)">
+<meta property="og:description" content="¶自己制作一个hexo插件吧（一） ¶注册NPM账户 登录官网免费注册 进入注册页需进行防bot验证 注册后一定要进行邮箱验证,不然无法进行发布操作 ¶初始化插件 新建插件文件夹 123mkdir hexo-your-modcd hexo-your-modnpm init ¶配置插件信息 根据提示输入信息: 12345678910111213$ npm init...package name:">
 <meta property="og:locale">
 <meta property="og:image" content="https://stephenzsir.github.io/images/open_button.png">
 <meta property="og:image" content="https://stephenzsir.github.io/images/toolbar.png">
@@ -143,7 +145,11 @@
 
 
 
-<meta name="generator" content="Hexo 5.2.0"></head>
+<!-- hexo injector head_end start -->
+<script src="https://stephenzsir.github.io/script/windowflow/jquery.js"></script>
+
+<script src="https://stephenzsir.github.io/script/windowflow/floatingPic.js"></script>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -417,7 +423,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  369字
+                  370字
                 </span>
               
 
@@ -455,26 +461,35 @@
 
       
         <meta name="referrer" content="no-referrer" />
-
-<h2 id="自己制作一个hexo插件吧（一）"><a href="#自己制作一个hexo插件吧（一）" class="headerlink" title="自己制作一个hexo插件吧（一）"></a>自己制作一个hexo插件吧（一）</h2><h3 id="注册NPM账户"><a href="#注册NPM账户" class="headerlink" title="注册NPM账户"></a>注册NPM账户</h3><p>登录官网<a target="_blank" rel="noopener" href="https://www.npmjs.com/signup">免费注册</a><br>进入注册页需进行防bot验证<br>注册后一定要进行邮箱验证,不然无法进行发布操作</p>
-<h3 id="初始化插件"><a href="#初始化插件" class="headerlink" title="初始化插件"></a>初始化插件</h3><p>新建插件文件夹</p>
+<h2 id="自己制作一个hexo插件吧（一）"><a class="header-anchor" href="#自己制作一个hexo插件吧（一）">¶</a>自己制作一个hexo插件吧（一）</h2>
+<h3 id="注册NPM账户"><a class="header-anchor" href="#注册NPM账户">¶</a>注册NPM账户</h3>
+<p>登录官网<a target="_blank" rel="noopener" href="https://www.npmjs.com/signup">免费注册</a><br>
+进入注册页需进行防bot验证<br>
+注册后一定要进行邮箱验证,不然无法进行发布操作</p>
+<h3 id="初始化插件"><a class="header-anchor" href="#初始化插件">¶</a>初始化插件</h3>
+<p>新建插件文件夹</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir hexo-your-mod</span><br><span class="line"><span class="built_in">cd</span> hexo-your-mod</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置插件信息"><a href="#配置插件信息" class="headerlink" title="配置插件信息"></a>配置插件信息</h3><p>根据提示输入信息:</p>
+<h3 id="配置插件信息"><a class="header-anchor" href="#配置插件信息">¶</a>配置插件信息</h3>
+<p>根据提示输入信息:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm init</span><br><span class="line">...</span><br><span class="line">package name: (mytest) hexo-remote-writting</span><br><span class="line">version: (1.0.0) 0.0.1</span><br><span class="line">description: A hexo plugin to support writting post remotely</span><br><span class="line">entry point: (index.js)</span><br><span class="line"><span class="built_in">test</span> <span class="built_in">command</span>:</span><br><span class="line">git repository:</span><br><span class="line">keywords: hexo plugin</span><br><span class="line">author: yourname</span><br><span class="line">license: (ISC) MIT</span><br><span class="line"></span><br><span class="line">Is this OK? (yes)</span><br></pre></td></tr></table></figure>
-
-<h3 id="登录NPM并上传插件"><a href="#登录NPM并上传插件" class="headerlink" title="登录NPM并上传插件"></a>登录NPM并上传插件</h3><p>登录</p>
+<h3 id="登录NPM并上传插件"><a class="header-anchor" href="#登录NPM并上传插件">¶</a>登录NPM并上传插件</h3>
+<p>登录</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm login</span><br><span class="line">$ username: yourname</span><br><span class="line">$ password: yourpass</span><br><span class="line">$ Email: (this IS public) XXXX@126.com</span><br></pre></td></tr></table></figure>
 <p>发布</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm publish</span><br></pre></td></tr></table></figure>
 <p>上传完成后可以测试下是否能正常install</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-your-mod --save</span><br></pre></td></tr></table></figure>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>hexo插件之前也没有接触过，一边学习一边制作，同时把制作过程分享给大家<br>目前想法是把之前做网站时做过的一个无障碍访问模块添加到hexo插件<br>包含网页内容自动朗读和点读，网页字体大小设置，高对比度设置，网页放大缩小，定位点等<br>然后配置项可调整悬浮位置（top，left，right，bottom），调节朗读语速，字号大小</p>
+<h3 id="结语"><a class="header-anchor" href="#结语">¶</a>结语</h3>
+<p>hexo插件之前也没有接触过，一边学习一边制作，同时把制作过程分享给大家<br>
+目前想法是把之前做网站时做过的一个无障碍访问模块添加到hexo插件<br>
+包含网页内容自动朗读和点读，网页字体大小设置，高对比度设置，网页放大缩小，定位点等<br>
+然后配置项可调整悬浮位置（top，left，right，bottom），调节朗读语速，字号大小</p>
 <p>开关</p>
 <p><img src="https://stephenzsir.github.io/images/open_button.png" alt="Image text"></p>
 <p>工具栏</p>
 <p><img src="https://stephenzsir.github.io/images/toolbar.png" alt="Image text"></p>
-<p>新建了个github项目<a target="_blank" rel="noopener" href="https://github.com/StephenZSIR/hexo-accessibility-view">地址</a><br>希望或许可以更新下去，不过估计也不会有人看到吧，就当日记用了</p>
+<p>新建了个github项目<a target="_blank" rel="noopener" href="https://github.com/StephenZSIR/hexo-accessibility-view">地址</a><br>
+希望或许可以更新下去，不过估计也不会有人看到吧，就当日记用了</p>
 <p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/">https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin/</a> </br>转载请注明出处</p>
 
       
