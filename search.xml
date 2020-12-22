@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>博客插件安装</title>
+    <url>/2020/12/17/2020-12-17/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+<h2 id="今日博客插件安装"><a class="header-anchor" href="#今日博客插件安装">¶</a>今日博客插件安装</h2>
+<h3 id="hexo-generator-feed-RSS订阅"><a class="header-anchor" href="#hexo-generator-feed-RSS订阅">¶</a>hexo-generator-feed RSS订阅</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<p>根目录_config.yml配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: <span class="string">&#x27; &#x27;</span></span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-generator-sitemap-站点地图"><a class="header-anchor" href="#hexo-generator-sitemap-站点地图">¶</a>hexo-generator-sitemap 站点地图</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br><span class="line">$ npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+<p>根目录_config.yml配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-generator-searchdb-网站搜索"><a class="header-anchor" href="#hexo-generator-searchdb-网站搜索">¶</a>hexo-generator-searchdb 网站搜索</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p>根目录_config.yml配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-helper-live2d-虚拟动漫人物"><a class="header-anchor" href="#hexo-helper-live2d-虚拟动漫人物">¶</a>hexo-helper-live2d 虚拟动漫人物</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-helper-live2d --save</span><br></pre></td></tr></table></figure>
+<p>NEXT主题目录_config.yml配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span></span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  <span class="built_in">log</span>: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 100</span><br><span class="line">    height: 200</span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
+<h3 id="hexo-wordcount-文章字数阅读时间统计"><a class="header-anchor" href="#hexo-wordcount-文章字数阅读时间统计">¶</a>hexo-wordcount 文章字数阅读时间统计</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<p>根目录_config.yml配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: <span class="literal">true</span>                <span class="comment"># 文章字数统计</span></span><br><span class="line">  time: <span class="literal">true</span>                   <span class="comment"># 文章阅读时长</span></span><br><span class="line">  total_symbols: <span class="literal">true</span>          <span class="comment"># 站点总字数统计</span></span><br><span class="line">  total_time: <span class="literal">true</span>             <span class="comment"># 站点总阅读时长</span></span><br><span class="line">  exclude_codeblock: <span class="literal">false</span>     <span class="comment"># 排除代码字数统计</span></span><br></pre></td></tr></table></figure>
+<h3 id="valine-评论系统"><a class="header-anchor" href="#valine-评论系统">¶</a>valine 评论系统</h3>
+<p>开启Valine<br>
+注册Leancloud<br>
+我们的评论系统其实是放在Leancloud上的，因此首先需要去注册一个账号</p>
+<p>Leancloud官网<a href="https://leancloud.cn/">点我注册</a></p>
+<p>注册完以后需要创建一个应用，名字可以随便起，然后 进入应用-&gt;设置-&gt;应用key</p>
+<p>获取你的appid 和 appkey</p>
+<p>根目录_config.yml配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  appid:  <span class="comment"># your leancloud application appid</span></span><br><span class="line">  appkey:  <span class="comment"># your leancloud application appkey</span></span><br><span class="line">  notify: <span class="literal">true</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line">  verify: <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line">  placeholder: 说点什么吧！ <span class="comment"># comment box placeholder</span></span><br><span class="line">  avatar: mp <span class="comment"># gravatar style</span></span><br><span class="line">  guest_info: nick,mail,link <span class="comment"># custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># pagination size</span></span><br></pre></td></tr></table></figure>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/17/2020-12-17/">https://stephenzsir.github.io/2020/12/17/2020-12-17/</a> </br>转载请注明出处</p>
+]]></content>
+      <categories>
+        <category>schedule</category>
+      </categories>
+  </entry>
+  <entry>
     <title>部署博客时自动填入Github和Gitee账户密码</title>
     <url>/2020/12/18/DeployWithoutPassword/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
@@ -42,46 +82,6 @@ value:%USERPROFILE%
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>博客插件安装</title>
-    <url>/2020/12/17/2020-12-17/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer" />
-<h2 id="今日博客插件安装"><a class="header-anchor" href="#今日博客插件安装">¶</a>今日博客插件安装</h2>
-<h3 id="hexo-generator-feed-RSS订阅"><a class="header-anchor" href="#hexo-generator-feed-RSS订阅">¶</a>hexo-generator-feed RSS订阅</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-<p>根目录_config.yml配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: <span class="string">&#x27; &#x27;</span></span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-generator-sitemap-站点地图"><a class="header-anchor" href="#hexo-generator-sitemap-站点地图">¶</a>hexo-generator-sitemap 站点地图</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-sitemap --save</span><br><span class="line">$ npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
-<p>根目录_config.yml配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">  path: sitemap.xml</span><br><span class="line">baidusitemap:</span><br><span class="line">  path: baidusitemap.xml</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-generator-searchdb-网站搜索"><a class="header-anchor" href="#hexo-generator-searchdb-网站搜索">¶</a>hexo-generator-searchdb 网站搜索</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-<p>根目录_config.yml配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-helper-live2d-虚拟动漫人物"><a class="header-anchor" href="#hexo-helper-live2d-虚拟动漫人物">¶</a>hexo-helper-live2d 虚拟动漫人物</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-helper-live2d --save</span><br></pre></td></tr></table></figure>
-<p>NEXT主题目录_config.yml配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span></span><br><span class="line">  pluginRootPath: live2dw/</span><br><span class="line">  pluginJsPath: lib/</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  tagMode: <span class="literal">false</span></span><br><span class="line">  <span class="built_in">log</span>: <span class="literal">false</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-wanko</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 100</span><br><span class="line">    height: 200</span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7</span><br></pre></td></tr></table></figure>
-<h3 id="hexo-wordcount-文章字数阅读时间统计"><a class="header-anchor" href="#hexo-wordcount-文章字数阅读时间统计">¶</a>hexo-wordcount 文章字数阅读时间统计</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
-<p>根目录_config.yml配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: <span class="literal">true</span>                <span class="comment"># 文章字数统计</span></span><br><span class="line">  time: <span class="literal">true</span>                   <span class="comment"># 文章阅读时长</span></span><br><span class="line">  total_symbols: <span class="literal">true</span>          <span class="comment"># 站点总字数统计</span></span><br><span class="line">  total_time: <span class="literal">true</span>             <span class="comment"># 站点总阅读时长</span></span><br><span class="line">  exclude_codeblock: <span class="literal">false</span>     <span class="comment"># 排除代码字数统计</span></span><br></pre></td></tr></table></figure>
-<h3 id="valine-评论系统"><a class="header-anchor" href="#valine-评论系统">¶</a>valine 评论系统</h3>
-<p>开启Valine<br>
-注册Leancloud<br>
-我们的评论系统其实是放在Leancloud上的，因此首先需要去注册一个账号</p>
-<p>Leancloud官网<a href="https://leancloud.cn/">点我注册</a></p>
-<p>注册完以后需要创建一个应用，名字可以随便起，然后 进入应用-&gt;设置-&gt;应用key</p>
-<p>获取你的appid 和 appkey</p>
-<p>根目录_config.yml配置</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">valine:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  appid:  <span class="comment"># your leancloud application appid</span></span><br><span class="line">  appkey:  <span class="comment"># your leancloud application appkey</span></span><br><span class="line">  notify: <span class="literal">true</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line">  verify: <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line">  placeholder: 说点什么吧！ <span class="comment"># comment box placeholder</span></span><br><span class="line">  avatar: mp <span class="comment"># gravatar style</span></span><br><span class="line">  guest_info: nick,mail,link <span class="comment"># custom comment header</span></span><br><span class="line">  pageSize: 10 <span class="comment"># pagination size</span></span><br></pre></td></tr></table></figure>
-<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/17/2020-12-17/">https://stephenzsir.github.io/2020/12/17/2020-12-17/</a> </br>转载请注明出处</p>
-]]></content>
-      <categories>
-        <category>schedule</category>
-      </categories>
   </entry>
   <entry>
     <title>自己制作一个hexo插件吧（一）</title>
@@ -133,44 +133,6 @@ value:%USERPROFILE%
       </tags>
   </entry>
   <entry>
-    <title>自己制作一个hexo插件吧（二）</title>
-    <url>/2020/12/21/MakeYourHexoPlugin2/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer" />
-<h2 id="自己制作一个hexo插件吧（二）"><a class="header-anchor" href="#自己制作一个hexo插件吧（二）">¶</a>自己制作一个hexo插件吧（二）</h2>
-<h3 id="查看文档"><a class="header-anchor" href="#查看文档">¶</a>查看文档</h3>
-<p>官方文档地址<a href="https://hexo.io/zh-cn/api/">地址</a><br>
-第一次做hexo插件，先学习下一些基础的内容<br>
-大概了解了下hexo运作的机制</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">控制台 (Console)</span><br><span class="line">部署器 (Deployer)</span><br><span class="line">过滤器 (Filter)</span><br><span class="line">生成器 (Generator)</span><br><span class="line">辅助函数 (Helper)</span><br><span class="line">注入器 (Injector)</span><br><span class="line">迁移器 (Migrator)</span><br><span class="line">处理器 (Processor)</span><br><span class="line">渲染引擎 (Renderer)</span><br><span class="line">标签 (Tag)</span><br></pre></td></tr></table></figure>
-<p>了解各个扩展的作用</p>
-<h3 id="确定插件功能"><a class="header-anchor" href="#确定插件功能">¶</a>确定插件功能</h3>
-<p>将之前做过的一个网站悬浮移动广告做成插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">配置项:</span><br><span class="line">    是否启用</span><br><span class="line">    图片移动速度</span><br><span class="line">    图片宽度</span><br><span class="line">    图片高度</span><br><span class="line">    图片链接</span><br><span class="line">    图片地址</span><br><span class="line">    显示位置</span><br><span class="line">    浮动层级别</span><br><span class="line">```    </span><br><span class="line"></span><br><span class="line">具体功能如何实现文章里不再赘述，感兴趣可以直接去github项目[地址](https://github.com/StephenZSIR/hexo-flow-window)查看</span><br><span class="line">如何利用npm发布管理插件请查看上一篇文章[地址](https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin)</span><br><span class="line">本文主要讲述如何将封装成插件</span><br><span class="line"></span><br><span class="line"><span class="comment">### 实现思路</span></span><br><span class="line"></span><br><span class="line">目前想法是先在配置文件中设置配置项</span><br><span class="line">插件将所需的js和css在hexo生成静态文件时写入文件</span><br><span class="line">同时读取配置文件中的设置，调用注入的js中的初始化方法根据设置生成悬浮窗</span><br><span class="line"></span><br><span class="line"><span class="comment">### 配置文件设置</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在hexo根目录_config.yml下添加</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">winflow:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment">#是否启用</span></span><br><span class="line">  delay: <span class="string">&#x27;15&#x27;</span> <span class="comment">#移动速度</span></span><br><span class="line">  isLinkClosed: <span class="literal">false</span> <span class="comment">#超链接后是否关闭漂浮</span></span><br><span class="line">  localtion: <span class="string">&#x27;home&#x27;</span></span><br><span class="line">  ad: <span class="comment">#漂浮内容</span></span><br><span class="line">    headFilter: 0.3 <span class="comment">#关闭区域背景透明度(0.1-1)</span></span><br><span class="line">    img: <span class="string">&#x27;https://stephenzsir.github.io/images/avatar.jpg&#x27;</span> <span class="comment">#图片</span></span><br><span class="line">    imgWidth: <span class="string">&#x27;120&#x27;</span> <span class="comment">#图片高度</span></span><br><span class="line">    imgHeight: <span class="string">&#x27;120&#x27;</span> <span class="comment">#图片宽度</span></span><br><span class="line">    linkUrl: <span class="string">&#x27;https://stephenzsir.github.io/&#x27;</span> <span class="comment">#跳转地址</span></span><br><span class="line">    z_index: 99 <span class="comment">#浮动层级别</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">localtion可配置参数</span><br><span class="line">default: 注入到每个页面</span><br><span class="line">home: 只注入到主页</span><br><span class="line">post: 只注入到文章页面</span><br><span class="line">page: 只注入到独立页面</span><br><span class="line">archive: 只注入到归档页面</span><br><span class="line">category: 只注入到分类页面</span><br><span class="line">tag: 只注入到标签页面</span><br></pre></td></tr></table></figure>
-<h3 id="插件index-js编写"><a class="header-anchor" href="#插件index-js编写">¶</a>插件index.js编写</h3>
-<p>按照官方文档介绍和实现思路<br>
-本次使用Injector注入器扩展最为合适<br>
-具体实现如下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#引用方法</span></span><br><span class="line">const css = hexo.extend.helper.get(<span class="string">&#x27;css&#x27;</span>).<span class="built_in">bind</span>(hexo);</span><br><span class="line">const js = hexo.extend.helper.get(<span class="string">&#x27;js&#x27;</span>).<span class="built_in">bind</span>(hexo);</span><br><span class="line">const _ = require(<span class="string">&#x27;lodash&#x27;</span>);</span><br><span class="line"></span><br><span class="line">const blogRoot = hexo.config.root || <span class="string">&#x27;/&#x27;</span>;</span><br><span class="line"><span class="comment">#默认配置</span></span><br><span class="line">const defaultConfig = &#123;</span><br><span class="line">  <span class="string">&#x27;delay&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;isLinkClosed&#x27;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">&#x27;ad&#x27;</span>: &#123;</span><br><span class="line">	<span class="string">&#x27;headFilter&#x27;</span>: 0.3,</span><br><span class="line">    <span class="string">&#x27;img&#x27;</span>: <span class="string">&#x27;https://stephenzsir.github.io/images/avatar.jpg&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;imgHeight&#x27;</span>: <span class="string">&#x27;120&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;imgWidth&#x27;</span>: <span class="string">&#x27;120&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;linkUrl&#x27;</span>: <span class="string">&#x27;https://stephenzsir.github.io/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;z_index&#x27;</span>: 9999</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取hexo和主题配置文件覆盖默认配置</span></span><br><span class="line"><span class="built_in">let</span> config = _.defaultsDeep(&#123;</span><br><span class="line">&#125;, hexo.config.winflow, hexo.theme.config.winflow, defaultConfig);</span><br><span class="line"></span><br><span class="line"><span class="comment">#判断插件是否启用</span></span><br><span class="line"><span class="keyword">if</span> (hexo.config.winflow.enable) &#123;</span><br><span class="line"><span class="comment">#在body开始处注入插件样式（样式先上传到了服务器，用相对路径的方式应该也可以实现）</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_begin&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> css(<span class="string">&#x27;https://stephenzsir.github.io/style/windowflow/floatingPic.css&#x27;</span>);</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"><span class="comment">#在body结尾处注入插件脚本</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_end&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> js(<span class="string">&#x27;https://stephenzsir.github.io/script/windowflow/floatingPic.js&#x27;</span>);</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"><span class="comment">#在body结尾处注入插件初始化脚本</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_end&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  <span class="comment">#初始化脚本填入配置项</span></span><br><span class="line">  const scriptToInject = `$.floatingAd(<span class="variable">$&#123;JSON.stringify(config)&#125;</span>);`;</span><br><span class="line">  const contentToInject = `&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;<span class="variable">$&#123;scriptToInject&#125;</span>&lt;/script&gt;`;</span><br><span class="line">  <span class="built_in">return</span> contentToInject;</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"><span class="comment">#在body结尾处注入插件关闭事项脚本</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_end&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  const scriptToInject = `$(<span class="string">&#x27;.fixedAd .closeBtn&#x27;</span>).on(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="title">function</span></span>()&#123;$(this).parent(<span class="string">&#x27;.fixedAd&#x27;</span>).hide();&#125;);`;</span><br><span class="line">  const contentToInject = `&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;<span class="variable">$&#123;scriptToInject&#125;</span>&lt;/script&gt;`;</span><br><span class="line">  <span class="built_in">return</span> contentToInject;</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>至此，成功将js和css封装成了插件</p>
-<h3 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h3>
-<p>hexo自带了jquery，如果封装插件需引入jquery要注意版本冲突<br>
-npm发布插件时，每次发布都需迭代版本号，否则无法发布</p>
-<h3 id="效果预览"><a class="header-anchor" href="#效果预览">¶</a>效果预览</h3>
-<p><img src="https://stephenzsir.github.io/images/hexo_flow_window.gif" alt="Image text"></p>
-<h3 id="下载插件"><a class="header-anchor" href="#下载插件">¶</a>下载插件</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-flow-window --save</span><br></pre></td></tr></table></figure>
-<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/21/MakeYourHexoPlugin2/">https://stephenzsir.github.io/2020/12/21/MakeYourHexoPlugin2/</a> </br>转载请注明出处</p>
-]]></content>
-      <categories>
-        <category>插件</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>插件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nginx负载均衡下客户端真实IP获取</title>
     <url>/2020/12/18/Nginx-IP/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
@@ -211,6 +173,44 @@ npm发布插件时，每次发布都需迭代版本号，否则无法发布</p>
       <tags>
         <tag>Nginx</tag>
         <tag>IP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自己制作一个hexo插件吧（二）</title>
+    <url>/2020/12/21/MakeYourHexoPlugin2/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+<h2 id="自己制作一个hexo插件吧（二）"><a class="header-anchor" href="#自己制作一个hexo插件吧（二）">¶</a>自己制作一个hexo插件吧（二）</h2>
+<h3 id="查看文档"><a class="header-anchor" href="#查看文档">¶</a>查看文档</h3>
+<p>官方文档地址<a href="https://hexo.io/zh-cn/api/">地址</a><br>
+第一次做hexo插件，先学习下一些基础的内容<br>
+大概了解了下hexo运作的机制</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">控制台 (Console)</span><br><span class="line">部署器 (Deployer)</span><br><span class="line">过滤器 (Filter)</span><br><span class="line">生成器 (Generator)</span><br><span class="line">辅助函数 (Helper)</span><br><span class="line">注入器 (Injector)</span><br><span class="line">迁移器 (Migrator)</span><br><span class="line">处理器 (Processor)</span><br><span class="line">渲染引擎 (Renderer)</span><br><span class="line">标签 (Tag)</span><br></pre></td></tr></table></figure>
+<p>了解各个扩展的作用</p>
+<h3 id="确定插件功能"><a class="header-anchor" href="#确定插件功能">¶</a>确定插件功能</h3>
+<p>将之前做过的一个网站悬浮移动广告做成插件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">配置项:</span><br><span class="line">    是否启用</span><br><span class="line">    图片移动速度</span><br><span class="line">    图片宽度</span><br><span class="line">    图片高度</span><br><span class="line">    图片链接</span><br><span class="line">    图片地址</span><br><span class="line">    显示位置</span><br><span class="line">    浮动层级别</span><br><span class="line">```    </span><br><span class="line"></span><br><span class="line">具体功能如何实现文章里不再赘述，感兴趣可以直接去github项目[地址](https://github.com/StephenZSIR/hexo-flow-window)查看</span><br><span class="line">如何利用npm发布管理插件请查看上一篇文章[地址](https://stephenzsir.github.io/2020/12/18/MakeYourHexoPlugin)</span><br><span class="line">本文主要讲述如何将封装成插件</span><br><span class="line"></span><br><span class="line"><span class="comment">### 实现思路</span></span><br><span class="line"></span><br><span class="line">目前想法是先在配置文件中设置配置项</span><br><span class="line">插件将所需的js和css在hexo生成静态文件时写入文件</span><br><span class="line">同时读取配置文件中的设置，调用注入的js中的初始化方法根据设置生成悬浮窗</span><br><span class="line"></span><br><span class="line"><span class="comment">### 配置文件设置</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在hexo根目录_config.yml下添加</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">winflow:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment">#是否启用</span></span><br><span class="line">  delay: <span class="string">&#x27;15&#x27;</span> <span class="comment">#移动速度</span></span><br><span class="line">  isLinkClosed: <span class="literal">false</span> <span class="comment">#超链接后是否关闭漂浮</span></span><br><span class="line">  localtion: <span class="string">&#x27;home&#x27;</span></span><br><span class="line">  ad: <span class="comment">#漂浮内容</span></span><br><span class="line">    headFilter: 0.3 <span class="comment">#关闭区域背景透明度(0.1-1)</span></span><br><span class="line">    img: <span class="string">&#x27;https://stephenzsir.github.io/images/avatar.jpg&#x27;</span> <span class="comment">#图片</span></span><br><span class="line">    imgWidth: <span class="string">&#x27;120&#x27;</span> <span class="comment">#图片高度</span></span><br><span class="line">    imgHeight: <span class="string">&#x27;120&#x27;</span> <span class="comment">#图片宽度</span></span><br><span class="line">    linkUrl: <span class="string">&#x27;https://stephenzsir.github.io/&#x27;</span> <span class="comment">#跳转地址</span></span><br><span class="line">    z_index: 99 <span class="comment">#浮动层级别</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">localtion可配置参数</span><br><span class="line">default: 注入到每个页面</span><br><span class="line">home: 只注入到主页</span><br><span class="line">post: 只注入到文章页面</span><br><span class="line">page: 只注入到独立页面</span><br><span class="line">archive: 只注入到归档页面</span><br><span class="line">category: 只注入到分类页面</span><br><span class="line">tag: 只注入到标签页面</span><br></pre></td></tr></table></figure>
+<h3 id="插件index-js编写"><a class="header-anchor" href="#插件index-js编写">¶</a>插件index.js编写</h3>
+<p>按照官方文档介绍和实现思路<br>
+本次使用Injector注入器扩展最为合适<br>
+具体实现如下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#引用方法</span></span><br><span class="line">const css = hexo.extend.helper.get(<span class="string">&#x27;css&#x27;</span>).<span class="built_in">bind</span>(hexo);</span><br><span class="line">const js = hexo.extend.helper.get(<span class="string">&#x27;js&#x27;</span>).<span class="built_in">bind</span>(hexo);</span><br><span class="line">const _ = require(<span class="string">&#x27;lodash&#x27;</span>);</span><br><span class="line"></span><br><span class="line">const blogRoot = hexo.config.root || <span class="string">&#x27;/&#x27;</span>;</span><br><span class="line"><span class="comment">#默认配置</span></span><br><span class="line">const defaultConfig = &#123;</span><br><span class="line">  <span class="string">&#x27;delay&#x27;</span>: <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">  <span class="string">&#x27;isLinkClosed&#x27;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="string">&#x27;ad&#x27;</span>: &#123;</span><br><span class="line">	<span class="string">&#x27;headFilter&#x27;</span>: 0.3,</span><br><span class="line">    <span class="string">&#x27;img&#x27;</span>: <span class="string">&#x27;https://stephenzsir.github.io/images/avatar.jpg&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;imgHeight&#x27;</span>: <span class="string">&#x27;120&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;imgWidth&#x27;</span>: <span class="string">&#x27;120&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;linkUrl&#x27;</span>: <span class="string">&#x27;https://stephenzsir.github.io/&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;z_index&#x27;</span>: 9999</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取hexo和主题配置文件覆盖默认配置</span></span><br><span class="line"><span class="built_in">let</span> config = _.defaultsDeep(&#123;</span><br><span class="line">&#125;, hexo.config.winflow, hexo.theme.config.winflow, defaultConfig);</span><br><span class="line"></span><br><span class="line"><span class="comment">#判断插件是否启用</span></span><br><span class="line"><span class="keyword">if</span> (hexo.config.winflow.enable) &#123;</span><br><span class="line"><span class="comment">#在body开始处注入插件样式（样式先上传到了服务器，用相对路径的方式应该也可以实现）</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_begin&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> css(<span class="string">&#x27;https://stephenzsir.github.io/style/windowflow/floatingPic.css&#x27;</span>);</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"><span class="comment">#在body结尾处注入插件脚本</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_end&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> js(<span class="string">&#x27;https://stephenzsir.github.io/script/windowflow/floatingPic.js&#x27;</span>);</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"><span class="comment">#在body结尾处注入插件初始化脚本</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_end&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  <span class="comment">#初始化脚本填入配置项</span></span><br><span class="line">  const scriptToInject = `$.floatingAd(<span class="variable">$&#123;JSON.stringify(config)&#125;</span>);`;</span><br><span class="line">  const contentToInject = `&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;<span class="variable">$&#123;scriptToInject&#125;</span>&lt;/script&gt;`;</span><br><span class="line">  <span class="built_in">return</span> contentToInject;</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"><span class="comment">#在body结尾处注入插件关闭事项脚本</span></span><br><span class="line">hexo.extend.injector.register(<span class="string">&#x27;body_end&#x27;</span>, () =&gt; &#123;</span><br><span class="line">  const scriptToInject = `$(<span class="string">&#x27;.fixedAd .closeBtn&#x27;</span>).on(<span class="string">&#x27;click&#x27;</span>,<span class="function"><span class="title">function</span></span>()&#123;$(this).parent(<span class="string">&#x27;.fixedAd&#x27;</span>).hide();&#125;);`;</span><br><span class="line">  const contentToInject = `&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;<span class="variable">$&#123;scriptToInject&#125;</span>&lt;/script&gt;`;</span><br><span class="line">  <span class="built_in">return</span> contentToInject;</span><br><span class="line">&#125;, hexo.config.winflow.localtion);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此，成功将js和css封装成了插件</p>
+<h3 id="注意事项"><a class="header-anchor" href="#注意事项">¶</a>注意事项</h3>
+<p>hexo自带了jquery，如果封装插件需引入jquery要注意版本冲突<br>
+npm发布插件时，每次发布都需迭代版本号，否则无法发布</p>
+<h3 id="效果预览"><a class="header-anchor" href="#效果预览">¶</a>效果预览</h3>
+<p><img src="https://stephenzsir.github.io/images/hexo_flow_window.gif" alt="Image text"></p>
+<h3 id="下载插件"><a class="header-anchor" href="#下载插件">¶</a>下载插件</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-flow-window --save</span><br></pre></td></tr></table></figure>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/21/MakeYourHexoPlugin2/">https://stephenzsir.github.io/2020/12/21/MakeYourHexoPlugin2/</a> </br>转载请注明出处</p>
+]]></content>
+      <categories>
+        <category>插件</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>插件</tag>
       </tags>
   </entry>
   <entry>
