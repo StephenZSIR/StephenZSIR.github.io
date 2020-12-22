@@ -87,7 +87,6 @@ value:%USERPROFILE%
     <title>自己制作一个hexo插件吧（一）</title>
     <url>/2020/12/18/MakeYourHexoPlugin/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
-<h2 id="自己制作一个hexo插件吧（一）"><a class="header-anchor" href="#自己制作一个hexo插件吧（一）">¶</a>自己制作一个hexo插件吧（一）</h2>
 <h3 id="注册NPM账户"><a class="header-anchor" href="#注册NPM账户">¶</a>注册NPM账户</h3>
 <p>登录官网<a href="https://www.npmjs.com/signup">免费注册</a><br>
 进入注册页需进行防bot验证<br>
@@ -136,7 +135,6 @@ value:%USERPROFILE%
     <title>自己制作一个hexo插件吧（二）</title>
     <url>/2020/12/21/MakeYourHexoPlugin2/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
-<h2 id="自己制作一个hexo插件吧（二）"><a class="header-anchor" href="#自己制作一个hexo插件吧（二）">¶</a>自己制作一个hexo插件吧（二）</h2>
 <h3 id="查看文档"><a class="header-anchor" href="#查看文档">¶</a>查看文档</h3>
 <p>官方文档地址<a href="https://hexo.io/zh-cn/api/">地址</a><br>
 第一次做hexo插件，先学习下一些基础的内容<br>
