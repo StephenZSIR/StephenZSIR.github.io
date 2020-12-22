@@ -41,6 +41,49 @@
       </categories>
   </entry>
   <entry>
+    <title>部署博客时自动填入Github和Gitee账户密码</title>
+    <url>/2020/12/18/DeployWithoutPassword/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+<h2 id="环境变量设置"><a class="header-anchor" href="#环境变量设置">¶</a>环境变量设置</h2>
+<p>在环境变量-系统变量中添加以下变量</p>
+<pre><code>name:HOME
+value:%USERPROFILE%
+</code></pre>
+<h2 id="添加配置文件"><a class="header-anchor" href="#添加配置文件">¶</a>添加配置文件</h2>
+<p>在以下文件夹内新建文件名为_netrc的配置文件</p>
+<blockquote>
+<p>C:\Users\用户名\</p>
+</blockquote>
+<p>配置文件内容</p>
+<blockquote>
+<p>1 machine <a href="http://github.com">github.com</a><br>
+2 login 用户名<br>
+3 password 密码<br>
+4 machine <a href="http://gitee.com">gitee.com</a><br>
+5 login 用户名<br>
+6 password 密码</p>
+</blockquote>
+<h2 id="hexo配置文件"><a class="header-anchor" href="#hexo配置文件">¶</a>hexo配置文件</h2>
+<p>博客根目录下_config.yml配置</p>
+<pre><code>deploy:
+    type: git 
+    repository: 
+	    github: https://github.com/XXXXX/XXXXX.github.io 
+	    gitee: https://gitee.com/XXXXX/XXXXX.git
+    branch: master
+</code></pre>
+<h2 id="部署博客"><a class="header-anchor" href="#部署博客">¶</a>部署博客</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/">https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/</a> </br>转载请注明出处</p>
+]]></content>
+      <categories>
+        <category>博客技巧</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自己制作一个hexo插件吧（一）</title>
     <url>/2020/12/18/MakeYourHexoPlugin/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
@@ -90,49 +133,6 @@
       </tags>
   </entry>
   <entry>
-    <title>部署博客时自动填入Github和Gitee账户密码</title>
-    <url>/2020/12/18/DeployWithoutPassword/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer" />
-<h2 id="环境变量设置"><a class="header-anchor" href="#环境变量设置">¶</a>环境变量设置</h2>
-<p>在环境变量-系统变量中添加以下变量</p>
-<pre><code>name:HOME
-value:%USERPROFILE%
-</code></pre>
-<h2 id="添加配置文件"><a class="header-anchor" href="#添加配置文件">¶</a>添加配置文件</h2>
-<p>在以下文件夹内新建文件名为_netrc的配置文件</p>
-<blockquote>
-<p>C:\Users\用户名\</p>
-</blockquote>
-<p>配置文件内容</p>
-<blockquote>
-<p>1 machine <a href="http://github.com">github.com</a><br>
-2 login 用户名<br>
-3 password 密码<br>
-4 machine <a href="http://gitee.com">gitee.com</a><br>
-5 login 用户名<br>
-6 password 密码</p>
-</blockquote>
-<h2 id="hexo配置文件"><a class="header-anchor" href="#hexo配置文件">¶</a>hexo配置文件</h2>
-<p>博客根目录下_config.yml配置</p>
-<pre><code>deploy:
-    type: git 
-    repository: 
-	    github: https://github.com/XXXXX/XXXXX.github.io 
-	    gitee: https://gitee.com/XXXXX/XXXXX.git
-    branch: master
-</code></pre>
-<h2 id="部署博客"><a class="header-anchor" href="#部署博客">¶</a>部署博客</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/">https://stephenzsir.github.io/2020/12/18/DeployWithoutPassword/</a> </br>转载请注明出处</p>
-]]></content>
-      <categories>
-        <category>博客技巧</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>自己制作一个hexo插件吧（二）</title>
     <url>/2020/12/21/MakeYourHexoPlugin2/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
@@ -168,6 +168,33 @@ npm发布插件时，每次发布都需迭代版本号，否则无法发布</p>
       <tags>
         <tag>hexo</tag>
         <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/12/16/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a class="header-anchor" href="#Quick-Start">¶</a>Quick Start</h2>
+<h3 id="Create-a-new-post"><a class="header-anchor" href="#Create-a-new-post">¶</a>Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a class="header-anchor" href="#Run-server">¶</a>Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a class="header-anchor" href="#Generate-static-files">¶</a>Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a class="header-anchor" href="#Deploy-to-remote-sites">¶</a>Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/16/hello-world/">https://stephenzsir.github.io/2020/12/16/hello-world/</a> </br>转载请注明出处</p>
+]]></content>
+      <categories>
+        <category>默认</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -211,33 +238,6 @@ npm发布插件时，每次发布都需迭代版本号，否则无法发布</p>
       <tags>
         <tag>Nginx</tag>
         <tag>IP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/12/16/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a class="header-anchor" href="#Quick-Start">¶</a>Quick Start</h2>
-<h3 id="Create-a-new-post"><a class="header-anchor" href="#Create-a-new-post">¶</a>Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a class="header-anchor" href="#Run-server">¶</a>Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a class="header-anchor" href="#Generate-static-files">¶</a>Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a class="header-anchor" href="#Deploy-to-remote-sites">¶</a>Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<p></br>本文地址 <a href="https://stephenzsir.github.io/2020/12/16/hello-world/">https://stephenzsir.github.io/2020/12/16/hello-world/</a> </br>转载请注明出处</p>
-]]></content>
-      <categories>
-        <category>默认</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
