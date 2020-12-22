@@ -1,0 +1,60 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 80vh;
+    margin: 0;
+}
+*{
+    font-family: monospace;
+    text-align: center;
+    text-transform: capitalize;
+    user-select: none;
+}
+.piano-key{
+    cursor: pointer;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 1rem;
+    height: 7rem;
+    width: 2rem;
+    font-size: 1.2rem;
+    border: 1px solid #000000;
+    position: relative;
+}
+
+.piano-key_black {
+    height: 4rem;
+    max-width: 0rem;
+    padding: 0;
+    border: 0;
+    z-index: 99999999;
+    vertical-align: top;
+}
+
+.piano-key::after{
+    content: var(--val);
+    display: block;
+}
+
+.piano-key_black::after{
+    position: absolute;
+    background: black;
+    width: 1rem;
+    height: 4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano-key[data-playing='true']{
+    background: red;
+}
+
+.piano-key_black[data-playing='true']::after{
+    background: red;
+}

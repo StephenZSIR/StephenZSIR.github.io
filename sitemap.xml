@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stephenzsir.github.io/2020/12/22/interesting-html5/</loc>
+    
+    <lastmod>2020-12-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stephenzsir.github.io/2020/12/21/MakeYourHexoPlugin2/</loc>
     
     <lastmod>2020-12-22</lastmod>
@@ -78,6 +85,363 @@
     
   </url>
   
+  <url>
+    <loc>https://stephenzsir.github.io/game/piano/main.html</loc>
+    
+    <lastmod>2020-09-28</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/input-game/main.html</loc>
+    
+    <lastmod>2019-06-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/drop-body/main.html</loc>
+    
+    <lastmod>2019-06-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/3d-rubik-cube/index.html</loc>
+    
+    <lastmod>2018-12-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/index.html</loc>
+    
+    <lastmod>2018-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/index2.html</loc>
+    
+    <lastmod>2018-02-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/default.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/memcopy.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_airbrush.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_blackwhite.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_brush.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_change_color.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_change_size.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_clear_image.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_color_box.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_curves.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_custom_colors.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_cutout_copy_move.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_cutout_save.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_cutout_select.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_enlarge_area.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_erase_large.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_erase_small.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_flip_picture.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_fill.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_freeform_lines.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_grid.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_insert_file.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_lines.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_invert.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_not_in_color_box.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_ovals.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_polygons.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_print.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_rectangles.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_set_default_colors.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_skew_picture.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_text.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_toolbox.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_trans_opaque.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_undo.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_wallpaper.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/windows-draw/help/paint_zoom.html</loc>
+    
+    <lastmod>2018-01-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/spider-web/index.html</loc>
+    
+    <lastmod>2017-08-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/remove-game/index2.html</loc>
+    
+    <lastmod>2017-07-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/remove-game/index.html</loc>
+    
+    <lastmod>2017-07-19</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/15-clock/index.html</loc>
+    
+    <lastmod>2016-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/card-remove-game/index.html</loc>
+    
+    <lastmod>2015-11-29</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/canvas-web-draw/index.html</loc>
+    
+    <lastmod>2015-01-03</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/alarm-clock/index.html</loc>
+    
+    <lastmod>2014-10-22</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/game/whale/index.html</loc>
+    
+    <lastmod>2014-03-11</lastmod>
+    
+  </url>
+  
 
   <url>
     <loc>https://stephenzsir.github.io/</loc>
@@ -122,6 +486,27 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://stephenzsir.github.io/tags/HTML5/</loc>
+    <lastmod>2020-12-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2020-12-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2020-12-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -154,6 +539,13 @@
   
   <url>
     <loc>https://stephenzsir.github.io/categories/%E9%BB%98%E8%AE%A4/</loc>
+    <lastmod>2020-12-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://stephenzsir.github.io/categories/HTML5/</loc>
     <lastmod>2020-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
